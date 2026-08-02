@@ -1,0 +1,334 @@
+{
+  "atualizado_em": "02/08/2026",
+  "fontes": [
+    "Roteiro_EUA_2026_v2_Milhas (1).pdf",
+    "FABIANO EMISSOES VIVA (1).pdf",
+    "Genitravel proposta 91684902/2 — roteiro, hoteis, cruzeiro, transfer, experiencias, resumo financeiro (02/08/2026)",
+    "Base_Oficial_Viagem_EUA_Mexico_Cruzeiro.md",
+    "Screenshot Free at Sea Plus — comprado para Fabiano e Renata (02/08/2026)"
+  ],
+  "viagem": {
+    "titulo": "EUA · México · Cruzeiro 2026",
+    "viajantes": ["Fabiano Roberto Correa de Freitas", "Renata Bertão Azevedo de Freitas"],
+    "periodo": "22 Out → 09 Nov 2026",
+    "data_ida": "2026-10-22T09:40:00",
+    "data_volta": "2026-11-09"
+  },
+  "timeline": [
+    {"data": "20 OUT", "titulo": "Saída de Cacoal", "sub": "Azul → São Paulo · bilhetes não emitidos", "status": "alerta"},
+    {"data": "22 OUT", "titulo": "Voo de Ida", "sub": "GRU → MEX → LAX · Aeromexico Premier Clássica", "status": "ok"},
+    {"data": "22–25/10", "titulo": "Los Angeles", "sub": "InterContinental Downtown · 3 noites", "status": "ok"},
+    {"data": "23/10", "titulo": "City Tour LA", "sub": "Hollywood e Downtown · 09h–17h", "status": "ok"},
+    {"data": "24/10", "titulo": "City Tour LA", "sub": "Praias e Litoral · 09h–17h", "status": "ok"},
+    {"data": "25/10–01/11", "titulo": "Cruzeiro Norwegian Encore", "sub": "Riviera Mexicana · Cabo · Mazatlán · Puerto Vallarta", "status": "ok"},
+    {"data": "01–05/11", "titulo": "Las Vegas", "sub": "Fontainebleau · 4 noites", "status": "ok"},
+    {"data": "02/11", "titulo": "City Tour Las Vegas", "sub": "Strip, Fremont, Bellagio · 09h–17h", "status": "ok"},
+    {"data": "05–08/11", "titulo": "Las Vegas", "sub": "Park MGM · 3 noites", "status": "ok"},
+    {"data": "06–08/11", "titulo": "PBR Teams Championship", "sub": "T-Mobile Arena · ao lado do Park MGM", "status": "alerta"},
+    {"data": "08 NOV", "titulo": "Voo de Retorno", "sub": "LAS → DFW → GRU · American Airlines Premium Economy", "status": "ok"},
+    {"data": "10 NOV", "titulo": "Retorno a Cacoal", "sub": "Azul · bilhetes não emitidos", "status": "alerta"}
+  ],
+  "voo_ida": {
+    "data": "Quinta, 22 Out 2026",
+    "cia": "Aeromexico",
+    "classe": "Premier Clássica",
+    "localizador": "#UFNGZZ",
+    "duracao_total": "16h 48min · 1 escala",
+    "status": "✅ Emitido",
+    "trechos": [
+      {"voo": "AM 0015", "de": "GRU", "de_cidade": "Guarulhos, SP · Terminal 3", "para": "MEX", "para_cidade": "Cidade do México · Terminal 2", "saida": "09:40", "chegada": "16:15 *"},
+      {"voo": "AM 0648", "de": "MEX", "de_cidade": "Cidade do México · Terminal 2", "para": "LAX", "para_cidade": "Los Angeles, CA", "saida": "18:55 *", "chegada": "22:28"}
+    ],
+    "conexao": "Conexão na Cidade do México (MEX): ≈ 2h40 · chegada 16:15 e saída 18:55 (horário local, ambos no Terminal 2 — sem troca de terminal). (*) Horários publicados na internet (Jul/2026) — batem com a duração total de 16h48 do bilhete; confirmar no app da Aeromexico com o localizador #UFNGZZ",
+    "bilhetes": [
+      {"nome": "Renata", "numero": "1396055771482"},
+      {"nome": "Fabiano", "numero": "1396055771483"}
+    ],
+    "poltronas": [
+      {"nome": "Renata", "t1": "4D", "t2": "1B"},
+      {"nome": "Fabiano", "t1": "4F", "t2": "1A"}
+    ],
+    "poltronas_labels": ["GRU → MEX", "MEX → LAX"]
+  },
+  "voo_retorno": {
+    "data": "Domingo, 08 Nov 2026",
+    "cia": "American Airlines",
+    "classe": "Premium Economy",
+    "localizador": "D2IMPF",
+    "duracao_total": "Chegada em GRU: Seg 09 Nov · 08:30",
+    "status": "✅ Emitido",
+    "trechos": [
+      {"voo": "AA 1584", "de": "LAS", "de_cidade": "Las Vegas, NV", "para": "DFW", "para_cidade": "Dallas Fort Worth, TX", "saida": "11:00", "chegada": "15:55 *"},
+      {"voo": "AA 963", "de": "DFW", "de_cidade": "Dallas, TX", "para": "GRU", "para_cidade": "Guarulhos, SP", "saida": "19:20", "chegada": "09 Nov · 08:30"}
+    ],
+    "conexao": "Conexão em Dallas (DFW): embarque do AA 963 às 19:20 · intervalo ≈ 3h25–3h30. (*) Roteiro oficial indica chegada 15:55; bilhete eletrônico indica 15:50 com conexão de 3h30",
+    "bagagem": "2x 23kg despachadas por passageiro · Família tarifária UNIXJV",
+    "equipamento": "AA 1584: Boeing 32Q (A321neo) · AA 963: Boeing 787-9",
+    "poltronas": [
+      {"nome": "Fabiano", "t1": "8A", "t2": "9A"},
+      {"nome": "Renata", "t1": "8B", "t2": "9C"}
+    ],
+    "poltronas_labels": ["LAS → DFW", "DFW → GRU"]
+  },
+  "hoteis": [
+    {
+      "nome": "InterContinental Los Angeles Downtown",
+      "cidade": "Los Angeles, CA",
+      "endereco": "900 Wilshire Blvd, Los Angeles, CA 90017, EUA",
+      "checkin": "22 Out 2026",
+      "checkout": "25 Out 2026",
+      "noites": 3,
+      "aposento": "Classic King, City View",
+      "refeicoes": "Café da manhã americano incluso",
+      "adultos": "2 adultos · 0 crianças",
+      "reserva": "5507899",
+      "localizador": "1115875-1119627",
+      "voucher": "1694408/3",
+      "emissao": "16/02/2026",
+      "contato_local": "30352811",
+      "emergencia": "55-11-3035-2811",
+      "distancia_aeroporto": "18 km do LAX",
+      "destaques": "Bar Spire 73 na cobertura (bar ao ar livre mais alto do Hemisfério Ocidental) · Restaurante La Boucherie · Microsoft Theater e Staples Center a 900m",
+      "cor": "#0e7c6b"
+    },
+    {
+      "nome": "Fontainebleau Las Vegas Hotel",
+      "cidade": "Las Vegas, NV",
+      "endereco": "2777 S Las Vegas Blvd, Las Vegas, NV 89109, EUA",
+      "checkin": "01 Nov 2026",
+      "checkout": "05 Nov 2026",
+      "noites": 4,
+      "aposento": "Bleau, King",
+      "refeicoes": "Sem refeições (café disponível com custo adicional)",
+      "adultos": "2 adultos · 0 crianças",
+      "reserva": "IYP1X5",
+      "localizador": "1115037-1118731",
+      "voucher": "1694408/2",
+      "emissao": "03/06/2026",
+      "contato_local": "30352811",
+      "emergencia": "55-11-3035-2811",
+      "destaques": "MICHELIN Key Award Hotel · Cassino · Spa · 5 min do The Venetian · 2,7 km da Sphere · 2,9 km do Colosseum at Caesars Palace",
+      "cor": "#6d4fc2"
+    },
+    {
+      "nome": "Park MGM Las Vegas",
+      "cidade": "Las Vegas, NV",
+      "endereco": "3770 S Las Vegas Blvd, Las Vegas, NV 89109, EUA",
+      "checkin": "05 Nov 2026",
+      "checkout": "08 Nov 2026",
+      "noites": 3,
+      "aposento": "Park MGM, King",
+      "refeicoes": "Sem refeições",
+      "adultos": "2 adultos · 0 crianças",
+      "reserva": "16394518865",
+      "localizador": "1129385-1133926",
+      "voucher": "1712341/1",
+      "emissao": "03/06/2026",
+      "contato_local": "30352811",
+      "emergencia": "55-11-3035-2811",
+      "distancia_aeroporto": "4,8 km do Harry Reid (LAS)",
+      "destaques": "Localizado ao lado da T-Mobile Arena (PBR!) · Teatro Dolby Live at Park MGM · Bavette's Steakhouse & Bar · BetMGM Sportsbook & Bar",
+      "cor": "#c2762a"
+    }
+  ],
+  "cruzeiro": {
+    "periodo": "25 Out → 01 Nov 2026 · 8 dias / 7 noites",
+    "companhia": "Norwegian Cruise Line (NCL)",
+    "navio": "Norwegian Encore",
+    "itinerario": "Riviera Mexicana",
+    "embarque": "Los Angeles, CA · saída 16:00 (25/10)",
+    "desembarque": "Los Angeles, CA · chegada 07:00 (01/11)",
+    "cabine": "Varanda Familiar · 22–26m² · até 4 pessoas",
+    "cabine_detalhe": "Cama de casal (conversível em 2 de solteiro sob solicitação) + cama adicional + varanda · Ar cond · TV · tomadas 110/220V · frigobar · cofre · banheiro privativo · secador",
+    "itinerario_dia_a_dia": [
+      {"data": "Qui 25/10", "porto": "Los Angeles, EUA — embarque", "chegada": "—", "saida": "16:00"},
+      {"data": "Sex 26/10", "porto": "Em navegação", "chegada": "—", "saida": "—"},
+      {"data": "Sáb 27/10", "porto": "Cabo San Lucas, México", "chegada": "11:00", "saida": "19:00"},
+      {"data": "Dom 28/10", "porto": "Mazatlán, México", "chegada": "08:00", "saida": "18:00"},
+      {"data": "Seg 29/10", "porto": "Puerto Vallarta, México", "chegada": "08:00", "saida": "18:00"},
+      {"data": "Ter 30/10", "porto": "Em navegação", "chegada": "—", "saida": "—"},
+      {"data": "Qua 31/10", "porto": "Em navegação", "chegada": "—", "saida": "—"},
+      {"data": "Qui 01/11", "porto": "Los Angeles, EUA — desembarque", "chegada": "07:00", "saida": "—"}
+    ],
+    "paradas": [
+      {"data": "27/10 Sáb", "porto": "Cabo San Lucas, México", "chegada": "11:00", "saida": "19:00"},
+      {"data": "28/10 Dom", "porto": "Mazatlán, México", "chegada": "08:00", "saida": "18:00"},
+      {"data": "29/10 Seg", "porto": "Puerto Vallarta, México", "chegada": "08:00", "saida": "18:00"}
+    ],
+    "pacote_base_fas": [
+      "Crédito de US$ 50 por porto em excursões em terra · US$ 150 total (3 portos)",
+      "3 jantares gratuitos em restaurantes de especialidade (pacote base Free At Sea)"
+    ],
+    "pacote_fas_plus": {
+      "nome": "Free at Sea Plus",
+      "status": "✅ COMPRADO — Fabiano e Renata",
+      "valor_por_pessoa_brl": 1463.00,
+      "valor_total_casal_brl": 2926.00,
+      "beneficios": [
+        "🌐 Wi-Fi de alta velocidade com streaming ilimitado (upgrade do plano base de 150 min)",
+        "☕ Pacote Starbucks® ilimitado — todos os cafés e bebidas especiais nas lojas/restaurantes Starbucks® a bordo · limite: 1 bebida por visita",
+        "💧 Bottled Water & Energy Drink Package — água mineral e energéticos disponíveis no bar; água mineral premium (com e sem gás) nos restaurantes",
+        "🍷 Signature Collection Wines, Champagne & Liquors — mais de 50 rótulos premium por taça; 40% de desconto em garrafas; destilados top-shelf incluindo Patrón Añejo e The Macallan 12 YO",
+        "🍽️ Restaurantes de especialidade — 50% de desconto nas tarifas de quaisquer refeições adicionais (substitui os 3 jantares gratuitos do pacote base)"
+      ]
+    },
+    "pacotes_inclusos": [
+      "✅ Wi-Fi de alta velocidade com streaming ilimitado (Free at Sea Plus)",
+      "✅ Pacote Starbucks® ilimitado a bordo (1 bebida/visita)",
+      "✅ Água mineral e energéticos no bar + água mineral premium nos restaurantes",
+      "✅ Vinhos, champagne e destilados premium (Patrón Añejo, Macallan 12 YO) — 40% off garrafas",
+      "✅ 50% de desconto em restaurantes de especialidade",
+      "✅ Crédito de US$ 50 por porto em excursões NCL · US$ 150 total (3 portos)"
+    ],
+    "gorjetas": "US$ 28,50 por pessoa por dia · estimativa: 2 pax × 7 noites = US$ 399",
+    "status": "⚠️ PARCIALMENTE CONFIRMADO",
+    "pendencias": [
+      "Número de reserva / localizador NCL",
+      "Documentos de embarque",
+      "Confirmar se gorjetas estão incluídas no pacote ou a pagar a bordo"
+    ],
+    "acao": "Solicitar à Alessandra Stecca o número de reserva NCL e os documentos de embarque"
+  },
+  "transfers": {
+    "grupo": "Tour Viva · Milhas Viagens & Turismo · 19 passageiros · serviço privativo",
+    "itens": [
+      {"n": 1, "descricao": "Transfer chegada LAX → Hotel InterContinental LA", "data": "22/10", "detalhe": "22h12 (10:12 pm) · 12 pax com Meet & Greet (voo de Fabiano e Renata)", "status": "✅ Incluído"},
+      {"n": 2, "descricao": "Transfer Hotel LA → Porto de Los Angeles", "data": "25/10", "detalhe": "Embarque no Norwegian Encore", "status": "✅ Incluído"},
+      {"n": 3, "descricao": "Transfer Porto LA → Fontainebleau Las Vegas", "data": "01/11", "detalhe": "19 pax em grupo", "status": "✅ Incluído"},
+      {"n": 4, "descricao": "Transfer Fontainebleau → Park MGM", "data": "05/11", "detalhe": "Troca de hotel", "status": "✅ Incluído"},
+      {"n": 5, "descricao": "Transfer Park MGM → Aeroporto LAS", "data": "08/11", "detalhe": "Receptivo de saída conforme voo", "status": "✅ Incluído"}
+    ],
+    "pendente": "GRU ↔ hotel em São Paulo (escalas 20–22/10 e 09–10/11) — não documentado"
+  },
+  "experiencias": [
+    {
+      "n": 1,
+      "titulo": "City Tour Los Angeles — Hollywood e Downtown",
+      "data": "23/10 (Sex)",
+      "saida": "09:00",
+      "retorno": "17:00",
+      "duracao": "8 horas",
+      "inclui": "Transporte + guia",
+      "nao_inclui": "Almoço, bebidas, despesas pessoais, ingressos opcionais",
+      "roteiro": "Beverly Hills · Sunset Strip · Hollywood Boulevard · Letreiro de Hollywood · Teatro Chinês · Calçada da Fama · Almoço livre (Hollywood) · Walt Disney Concert Hall · Cathedral of Our Lady of the Angels · Civic Center · Olvera Street",
+      "status": "✅ Incluído no pacote"
+    },
+    {
+      "n": 2,
+      "titulo": "City Tour Los Angeles — Praias e Litoral",
+      "data": "24/10 (Sáb)",
+      "saida": "09:00",
+      "retorno": "17:00",
+      "duracao": "8 horas",
+      "inclui": "Transporte + guia",
+      "nao_inclui": "Almoço, bebidas, despesas pessoais, atividades opcionais",
+      "roteiro": "Santa Monica (píer + calçadão + Oceano Pacífico) · Venice Beach (Ocean Front Walk + artistas de rua) · Almoço livre próximo às praias",
+      "status": "✅ Incluído no pacote"
+    },
+    {
+      "n": 3,
+      "titulo": "City Tour Las Vegas",
+      "data": "02/11 (Seg)",
+      "saida": "09:00",
+      "retorno": "17:00",
+      "duracao": "8 horas",
+      "inclui": "Transporte + guia",
+      "nao_inclui": "Almoço, bebidas, despesas pessoais, ingressos opcionais",
+      "roteiro": "Las Vegas Strip · Fontes do Bellagio · Resorts icônicos · Downtown Las Vegas · Fremont Street Experience · Almoço livre",
+      "status": "✅ Incluído no pacote"
+    },
+    {
+      "n": 4,
+      "titulo": "PBR Teams Championship",
+      "data": "06 a 08/11 (Sex–Dom)",
+      "saida": "—",
+      "retorno": "—",
+      "duracao": "3 dias de evento",
+      "inclui": "—",
+      "nao_inclui": "Ingressos a adquirir separadamente via AXS",
+      "roteiro": "T-Mobile Arena · Las Vegas · Final da temporada da liga de equipes de montaria em touros · Park MGM fica ao lado da arena",
+      "status": "⚠️ Ingressos a adquirir (AXS)"
+    }
+  ],
+  "financeiro": {
+    "pacote": "Tour Viva — Milhas Viagens & Turismo",
+    "opcao_escolhida": "Casal · Retorno dia 8 e 9/11",
+    "valor_total_usd": 1998.00,
+    "valor_por_pessoa_usd": 999.00,
+    "cambio_referencia": "R$ 5,30/US$ (02/08/2026)",
+    "estimativa_brl": "≈ R$ 10.589,40 (câmbio flutuante — valor final no dia do pagamento)",
+    "o_que_inclui": [
+      "Transfer LAX → Hotel LA (Meet & Greet)",
+      "Transfer Hotel LA → Porto (embarque cruzeiro)",
+      "Transfer Porto LA → Fontainebleau Las Vegas",
+      "Transfer de saída Las Vegas",
+      "Transfer Fontainebleau → Park MGM (05/11)",
+      "City Tour 1 — Hollywood e Downtown (23/10)",
+      "City Tour 2 — Praias e Litoral (24/10)",
+      "City Tour Las Vegas (02/11)"
+    ],
+    "nao_inclui": "Ingressos para shows, passeio de helicóptero, almoços dos tours, despesas pessoais",
+    "parcelas": [
+      {
+        "n": 1,
+        "descricao": "1ª Parcela — 50%",
+        "valor_usd": 999.00,
+        "vencimento": "07/08/2026",
+        "forma": "PIX · câmbio do dia",
+        "status": "⚠️ A PAGAR (vence em 5 dias!)"
+      },
+      {
+        "n": 2,
+        "descricao": "2ª Parcela — 50%",
+        "valor_usd": 999.00,
+        "vencimento": "27/09/2026",
+        "forma": "PIX · câmbio do dia",
+        "status": "⚠️ A PAGAR"
+      }
+    ],
+    "opcoes_disponiveis": [
+      {"opcao": "Pessoa · retorno 05/11", "valor": "US$ 939"},
+      {"opcao": "Casal · retorno 05/11", "valor": "US$ 1.878"},
+      {"opcao": "Pessoa · retorno 08–09/11", "valor": "US$ 999"},
+      {"opcao": "Casal · retorno 08–09/11 ← ESCOLHIDA", "valor": "US$ 1.998"}
+    ]
+  },
+  "hoteis_pendentes": [
+    {"quando": "Ida — 20 → 22 Out 2026", "noites": "2 noites", "onde": "São Paulo / região de Guarulhos (GRU)", "obs": "Azul chega 20/10; voo internacional sai de GRU 22/10 às 09:40 — preferir hotel perto do aeroporto"},
+    {"quando": "Retorno — 09 → 10 Nov 2026", "noites": "1 noite", "onde": "São Paulo / região de Guarulhos (GRU)", "obs": "Chegada internacional em GRU 09/11 às 08:30; voo Azul para Cacoal 10/11"}
+  ],
+  "logistica": {
+    "itens": [
+      {"k": "Origem", "v": "Cacoal, RO"},
+      {"k": "Companhia", "v": "Azul Linhas Aéreas"},
+      {"k": "Saída de Cacoal", "v": "20/10/2026 → São Paulo (Guarulhos)"},
+      {"k": "Retorno a Cacoal", "v": "10/11/2026 · São Paulo (Guarulhos) → Cacoal"},
+      {"k": "Rota provável (fonte: internet)", "v": "Azul atende Cacoal só via Cuiabá: voo AD 4791, Cacoal 14:05 → Cuiabá 15:25 (ter/qui/sáb — 20/10 e 10/11 são terças) + conexão Cuiabá ↔ Guarulhos"},
+      {"k": "Voos e horários oficiais", "v": "⚠️ A CONFIRMAR quando a Azul emitir os bilhetes"},
+      {"k": "Poltronas Fabiano (ida / volta)", "v": "4A / 4A"},
+      {"k": "Poltronas Renata (ida / volta)", "v": "4B / 4B"},
+      {"k": "Status", "v": "⚠️ Reservado — bilhetes NÃO emitidos (não aparece no app da Azul)"}
+    ],
+    "alerta": "⚠️ Passagens Azul ainda não emitidas — cobrar emissão e conferir se a reserva aparece no app. Obs: chegada internacional em GRU é 09/11 às 08:30 — retorno a Cacoal em 10/11 implica 1 noite em São Paulo."
+  },
+  "documentos": [
+    {"doc": "Passaporte nº", "fabiano": "GF361375", "renata": "GF361378"},
+    {"doc": "Passaporte — emissão", "fabiano": "13/10/2022", "renata": "13/10/2022"},
+    {"doc": "Passaporte — validade", "fabiano": "12/10/2032 ✅", "renata": "12/10/2032 ✅"},
+    {"doc": "Visto EUA (B1/B2) nº", "fabiano": "U9057812", "renata": "U9057811"},
+    {"doc": "Visto — emissão", "fabiano": "06/08/2024", "renata": "06/08/2024"},
+    {"doc": "Visto — validade", "fabiano": "01/08/2034 ✅", "renata": "01/08/2034 ✅"},
+    {"doc": "Visto — entradas", "fabiano": "M (múltiplas)", "renata": "M (múltiplas)"}
+  ],
+  "documentos_ok": true,
+  "documentos_status": "✅ VÁLIDOS",
+  "documentos_nota": "Passaportes e vistos válidos para a viagem (Out/Nov 2026). Fonte: arquivos reais no Dossiê Família — Passaporte Valido - Fabiano.jpg, Passaport RENATA.jpg, Visto EUA Fabiano.pdf, Visto EUA Renata.pdf. Vistos emitidos em Brasília, 06/08/2024.",
+  "operadora": {
+    "nome": "Milhas Viagens & Turismo",
+    "contato": "Alessandra Stecca — Diretora Executiva",
+    "telefone": "(69) 99919-8730",
+    "email": "ale.milhas@hotmail.com",
+    "cidade": "Cacoal, RO",
+    "consolidadora": "prmartins@frtconsolidadora.tur.br · 55 69 999198730"
+  }
+}

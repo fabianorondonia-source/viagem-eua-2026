@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>✈️ Viagem EUA 2026</title>
+<style>
+:root{
+  --bg:#070d20;--card:#111a3a;--card2:#0d1530;--border:#22305e;
+  --txt:#e8ecf8;--mut:#8b97c0;--acc:#4f8ff7;--gold:#f0a832;
+  --ok:#2ecc8f;--warn:#ff9f43;--red:#ff6b6b;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:linear-gradient(160deg,#070d20 0%,#0a1128 50%,#0c1533 100%);
+  min-height:100vh;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  color:var(--txt);padding:20px}
+.wrap{max-width:1280px;margin:0 auto}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,#12235e 0%,#0e1a45 60%,#101c4a 100%);
+  border:1px solid var(--border);border-radius:20px;padding:26px 30px;
+  display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between;
+  box-shadow:0 10px 40px rgba(0,0,0,.45);margin-bottom:20px}
+.hero h1{font-size:28px;letter-spacing:.5px}
+.hero h1 span{color:var(--gold)}
+.hero .sub{color:var(--mut);margin-top:5px;font-size:13px}
+.count{text-align:center;background:rgba(240,168,50,.1);border:1px solid rgba(240,168,50,.4);
+  border-radius:16px;padding:12px 24px;min-width:110px}
+.count .n{font-size:38px;font-weight:800;color:var(--gold);line-height:1}
+.count .l{font-size:11px;color:var(--mut);text-transform:uppercase;letter-spacing:1.5px;margin-top:3px}
+.badges{display:flex;gap:7px;flex-wrap:wrap;margin-top:10px}
+.badge{font-size:11.5px;padding:4px 11px;border-radius:20px;border:1px solid var(--border);
+  background:var(--card2);color:var(--mut)}
+.badge.alerta{border-color:rgba(255,159,67,.5);color:var(--warn)}
+
+/* TIMELINE */
+.tl{display:flex;gap:7px;overflow-x:auto;padding-bottom:4px;margin-bottom:20px}
+.tl .step{flex:0 0 auto;min-width:140px;background:var(--card);border:1px solid var(--border);
+  border-radius:14px;padding:12px 14px}
+.tl .step.alerta{border-color:rgba(255,159,67,.5)}
+.tl .d{font-size:10px;font-weight:700;color:var(--acc);letter-spacing:1px;text-transform:uppercase}
+.tl .step.alerta .d{color:var(--warn)}
+.tl .t{font-size:13px;font-weight:600;margin-top:3px}
+.tl .s{font-size:11px;color:var(--mut);margin-top:2px}
+
+/* ABAS */
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:20px}
+.tab{padding:9px 18px;border-radius:12px;font-size:13px;font-weight:600;cursor:pointer;
+  border:1px solid var(--border);background:var(--card2);color:var(--mut);
+  transition:all .18s;user-select:none}
+.tab:hover{background:var(--card);color:var(--txt)}
+.tab.ativo{background:var(--acc);color:#fff;border-color:var(--acc);
+  box-shadow:0 4px 16px rgba(79,143,247,.35)}
+.tab.ativo-warn{background:var(--warn);color:#1a0a00;border-color:var(--warn)}
+.pane{display:none}.pane.ativo{display:block}
+
+/* GRID */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:18px;
+  overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.3)}
+.card .hd{padding:15px 18px;display:flex;justify-content:space-between;align-items:flex-start;
+  gap:10px;flex-wrap:wrap}
+.card .hd h2{font-size:16px}
+.card .hd h2 small{display:block;font-size:12px;color:var(--mut);font-weight:400;margin-top:2px}
+.card .bd{padding:4px 18px 18px}
+.span2{grid-column:span 2}
+@media(max-width:860px){.span2{grid-column:span 1}}
+.tag{font-size:11px;font-weight:700;padding:4px 11px;border-radius:20px;letter-spacing:.4px;white-space:nowrap}
+.tag.ok{background:rgba(46,204,143,.15);color:var(--ok);border:1px solid rgba(46,204,143,.4)}
+.tag.warn{background:rgba(255,159,67,.15);color:var(--warn);border:1px solid rgba(255,159,67,.4)}
+.tag.red{background:rgba(255,107,107,.15);color:var(--red);border:1px solid rgba(255,107,107,.4)}
+.tag.info{background:rgba(79,143,247,.15);color:var(--acc);border:1px solid rgba(79,143,247,.4)}
+
+/* KV */
+.kv{display:grid;grid-template-columns:1fr 1fr;gap:7px 14px;margin-top:10px}
+.kv1{grid-template-columns:1fr}
+.kv .item{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:8px 11px}
+.kv .k{font-size:10px;color:var(--mut);text-transform:uppercase;letter-spacing:.8px}
+.kv .v{font-size:13px;font-weight:600;margin-top:2px;word-break:break-word;line-height:1.4}
+
+/* VOO */
+.leg{display:flex;align-items:center;gap:12px;padding:13px 0;border-bottom:1px dashed var(--border)}
+.leg:last-of-type{border-bottom:none}
+.leg .apt{text-align:center;min-width:80px}
+.leg .apt .code{font-size:24px;font-weight:800}
+.leg .apt .city{font-size:10px;color:var(--mut);margin-top:1px}
+.leg .apt .tm{font-size:15px;font-weight:700;color:var(--gold);margin-top:3px}
+.leg .apt .tm.w{color:var(--warn);font-size:10px}
+.leg .mid{flex:1;text-align:center;position:relative}
+.leg .mid .line{height:2px;background:linear-gradient(90deg,transparent,var(--acc),transparent)}
+.leg .mid .fl{font-size:11px;font-weight:700;color:var(--acc);margin-bottom:5px}
+.leg .mid .ico{position:absolute;top:calc(50% + 1px);left:50%;transform:translate(-50%,-50%);font-size:13px}
+.seats{margin-top:12px}
+.seats table{width:100%;border-collapse:collapse;font-size:12.5px}
+.seats th{color:var(--mut);font-size:10px;text-transform:uppercase;letter-spacing:.8px;
+  text-align:left;padding:5px 7px}
+.seats td{padding:7px;border-top:1px solid var(--border)}
+.seat{display:inline-block;background:var(--acc);color:#fff;font-weight:700;
+  border-radius:7px;padding:2px 11px;font-size:12px}
+
+/* HOTEL */
+.hotel .hd{border-left:4px solid var(--hc,var(--acc))}
+.hnights{font-size:10px;font-weight:700;background:var(--hc,var(--acc));color:#fff;
+  padding:3px 10px;border-radius:20px;white-space:nowrap}
+.haddr{font-size:11px;color:var(--mut);margin-top:2px}
+.hdest{background:rgba(79,143,247,.08);border:1px solid rgba(79,143,247,.2);
+  border-radius:10px;padding:9px 12px;font-size:12px;color:#a8c4ff;margin-top:10px;line-height:1.5}
+
+/* CRUZEIRO */
+.porto-grid{display:grid;gap:8px;margin-top:10px}
+.porto{display:flex;align-items:center;gap:12px;background:var(--card2);
+  border:1px solid var(--border);border-radius:12px;padding:11px 14px}
+.porto .flag{font-size:22px}
+.porto .info{flex:1}
+.porto .nome{font-size:14px;font-weight:700}
+.porto .dt{font-size:11px;color:var(--mut);margin-top:2px}
+.porto .hor{font-size:11px;color:var(--acc);margin-top:1px}
+.porto.nav{opacity:.5}
+.porto.nav .nome{color:var(--mut);font-style:italic}
+
+/* NOTA */
+.note{background:var(--card2);border:1px solid var(--border);border-radius:11px;
+  padding:10px 13px;font-size:12px;color:var(--mut);margin-top:10px;line-height:1.55}
+.note.warn{border-color:rgba(255,159,67,.45);color:#ffd9ae}
+.note.ok{border-color:rgba(46,204,143,.35);color:#a5f3d4}
+
+/* LISTAS */
+ul.plain{list-style:none;margin-top:8px}
+ul.plain li{padding:6px 0 6px 22px;position:relative;font-size:13px;
+  border-bottom:1px dashed var(--border)}
+ul.plain li:last-child{border-bottom:none}
+ul.plain li::before{content:"•";position:absolute;left:7px;color:var(--acc)}
+ul.plain.warn li::before{color:var(--warn)}
+
+/* FINANCEIRO */
+.parc{display:flex;justify-content:space-between;align-items:center;
+  background:var(--card2);border:1px solid var(--border);border-radius:12px;
+  padding:12px 16px;margin-top:8px}
+.parc .pl{font-size:14px;font-weight:600}
+.parc .ps{font-size:11px;color:var(--mut);margin-top:2px}
+.parc .pv{font-size:20px;font-weight:800;color:var(--gold)}
+
+/* DOCS */
+.docs-table{width:100%;border-collapse:collapse;font-size:12.5px;margin-top:10px}
+.docs-table th{color:var(--mut);font-size:10px;text-transform:uppercase;
+  letter-spacing:.8px;text-align:left;padding:6px 8px}
+.docs-table td{padding:8px;border-top:1px solid var(--border)}
+
+/* EXPERIÊNCIAS */
+.exp{background:var(--card2);border:1px solid var(--border);border-radius:14px;
+  padding:13px 15px;margin-top:10px}
+.exp .etit{font-size:14px;font-weight:700}
+.exp .edt{font-size:11px;color:var(--acc);margin-top:3px;font-weight:600}
+.exp .erot{font-size:12px;color:var(--mut);margin-top:6px;line-height:1.5}
+.exp .einc{font-size:11px;margin-top:6px}
+.exp .einc span{background:rgba(46,204,143,.12);color:var(--ok);
+  border:1px solid rgba(46,204,143,.3);border-radius:6px;padding:2px 8px;margin-right:4px}
+.exp .einc span.x{background:rgba(255,107,107,.1);color:var(--red);border-color:rgba(255,107,107,.3)}
+
+/* TRANSFERS */
+.tr-item{display:flex;gap:12px;align-items:flex-start;padding:10px 0;
+  border-bottom:1px dashed var(--border)}
+.tr-item:last-child{border-bottom:none}
+.tr-n{background:var(--acc);color:#fff;font-weight:800;border-radius:8px;
+  min-width:28px;height:28px;display:flex;align-items:center;justify-content:center;font-size:13px}
+.tr-info{flex:1}
+.tr-desc{font-size:13.5px;font-weight:600}
+.tr-det{font-size:11.5px;color:var(--mut);margin-top:2px}
+
+footer{margin-top:24px;text-align:center;color:var(--mut);font-size:11.5px;line-height:1.8}
+#status{display:inline-block;padding:2px 10px;border-radius:20px;border:1px solid var(--border);font-size:10px}
+#status.on{color:var(--ok);border-color:rgba(46,204,143,.4)}
+</style>
+</head>
+<body>
+<div class="wrap"><div id="app">Carregando…</div></div>
+<script>
+let D=null, _aba="geral", _sseOn=false;
+
+function diasRestantes(iso){
+  const a=new Date(iso),h=new Date();
+  return Math.max(0,Math.ceil((a-h)/(864e5)));
+}
+function esc(s){return String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]))}
+
+function legHtml(t){
+  const ws=String(t.saida).includes("VERIFICAR"),wc=String(t.chegada).includes("VERIFICAR");
+  return `<div class="leg">
+    <div class="apt"><div class="code">${esc(t.de)}</div><div class="city">${esc(t.de_cidade)}</div>
+      <div class="tm ${ws?"w":""}">${esc(t.saida)}</div></div>
+    <div class="mid"><div class="fl">${esc(t.voo)}</div><div class="line"></div><div class="ico">✈️</div></div>
+    <div class="apt"><div class="code">${esc(t.para)}</div><div class="city">${esc(t.para_cidade)}</div>
+      <div class="tm ${wc?"w":""}">${esc(t.chegada)}</div></div>
+  </div>`;
+}
+function seatsHtml(v){
+  return `<div class="seats"><table>
+    <tr><th>Passageiro</th><th>${esc(v.poltronas_labels[0])}</th><th>${esc(v.poltronas_labels[1])}</th></tr>
+    ${v.poltronas.map(p=>`<tr><td>${esc(p.nome)}</td>
+      <td><span class="seat">${esc(p.t1)}</span></td>
+      <td><span class="seat">${esc(p.t2)}</span></td></tr>`).join("")}
+  </table></div>`;
+}
+function vooCard(v,titulo){
+  const bil=v.bilhetes?`<div class="kv">${v.bilhetes.map(b=>`
+    <div class="item"><div class="k">Bilhete ${esc(b.nome)}</div>
+    <div class="v">${esc(b.numero)}</div></div>`).join("")}</div>`:"";
+  const extras=[["Localizador",v.localizador],["Classe",v.classe],["Duração",v.duracao_total],
+    v.bagagem?["Bagagem",v.bagagem]:null,v.equipamento?["Equipamento",v.equipamento]:null]
+    .filter(Boolean).map(([k,val])=>`<div class="item"><div class="k">${k}</div><div class="v">${esc(val)}</div></div>`).join("");
+  const w=v.conexao.includes("não constam")||v.conexao.includes("VERIFICAR");
+  return `<div class="card span2">
+    <div class="hd"><h2>✈️ ${titulo}<small>${esc(v.cia)} · ${esc(v.data)}</small></h2>
+      <span class="tag ok">${esc(v.status)}</span></div>
+    <div class="bd">
+      ${v.trechos.map(legHtml).join("")}
+      <div class="note ${w?"warn":""}">🔁 ${esc(v.conexao)}</div>
+      <div class="kv">${extras}</div>${bil}${seatsHtml(v)}
+    </div></div>`;
+}
+function hotelCard(h){
+  const kv=[["Check-in",h.checkin],["Check-out",h.checkout],["Aposento",h.aposento],
+    ["Refeições",h.refeicoes],["Nº Reserva",h.reserva],["Localizador",h.localizador],
+    ["Voucher",h.voucher],["Emissão",h.emissao],
+    h.distancia_aeroporto?["Aeroporto",h.distancia_aeroporto]:null,
+    ["Contato local",h.contato_local],["Emergência",h.emergencia]]
+    .filter(Boolean).map(([k,v])=>`<div class="item"><div class="k">${k}</div><div class="v">${esc(v)}</div></div>`).join("");
+  const dest=h.destaques?`<div class="hdest">⭐ ${esc(h.destaques)}</div>`:"";
+  return `<div class="card hotel" style="--hc:${h.cor}">
+    <div class="hd">
+      <div><h2>🏨 ${esc(h.nome)}<span class="haddr">📍 ${esc(h.endereco)}</span></h2></div>
+      <span class="hnights">${h.noites} noites</span>
+    </div>
+    <div class="bd"><div class="kv">${kv}</div>${dest}</div></div>`;
+}
+
+function tabAereos(){
+  const azul=D.logistica;
+  return `<div class="grid">
+    ${vooCard(D.voo_ida,"Voo de Ida")}
+    ${vooCard(D.voo_retorno,"Voo de Retorno")}
+    <div class="card span2">
+      <div class="hd"><h2>🛫 Voos Domésticos — Azul (Cacoal ↔ SP)</h2>
+        <span class="tag warn">⚠️ NÃO EMITIDO</span></div>
+      <div class="bd">
+        <div class="kv">${azul.itens.map(i=>`
+          <div class="item"><div class="k">${esc(i.k)}</div><div class="v">${esc(i.v)}</div></div>`).join("")}
+        </div>
+        <div class="note warn">${esc(azul.alerta)}</div>
+      </div></div>
+  </div>`;
+}
+
+function tabHoteis(){
+  return `<div class="grid">
+    ${D.hoteis.map(hotelCard).join("")}
+    <div class="card">
+      <div class="hd"><h2>🏨 Hotéis São Paulo — Escalas GRU</h2>
+        <span class="tag warn">⚠️ A RESERVAR</span></div>
+      <div class="bd">
+        ${(D.hoteis_pendentes||[]).map(h=>`
+          <div class="kv kv1" style="margin-top:8px">
+            <div class="item"><div class="k">${esc(h.quando)} · ${esc(h.noites)}</div>
+              <div class="v">${esc(h.onde)}</div>
+              <div style="font-size:11px;color:var(--mut);margin-top:4px">${esc(h.obs)}</div>
+            </div></div>`).join("")}
+        <div class="note warn">Nenhuma reserva em São Paulo feita até agora — nem ida nem retorno.</div>
+      </div></div>
+  </div>`;
+}
+
+function tabCruzeiro(){
+  const c=D.cruzeiro;
+  const flags={"Los Angeles":"🇺🇸","Cabo San Lucas":"🇲🇽","Mazatlán":"🇲🇽","Puerto Vallarta":"🇲🇽"};
+  const portosHtml=(c.itinerario_dia_a_dia||[]).map(p=>{
+    const nav=p.porto.includes("navegação");
+    const f=Object.entries(flags).find(([k])=>p.porto.includes(k));
+    return `<div class="porto ${nav?"nav":""}">
+      <div class="flag">${nav?"🌊":(f?f[1]:"🚢")}</div>
+      <div class="info">
+        <div class="nome">${esc(p.porto)}</div>
+        <div class="dt">${esc(p.data)}</div>
+        ${!nav?`<div class="hor">Chegada: ${esc(p.chegada)} · Saída: ${esc(p.saida)}</div>`:""}
+      </div></div>`;
+  }).join("");
+  const pac=(c.pacotes_inclusos||[]).map(p=>`<li>${esc(p)}</li>`).join("");
+  const pend=(c.pendencias||[]).map(p=>`<li>${esc(p)}</li>`).join("");
+  return `<div class="grid">
+    <div class="card span2">
+      <div class="hd">
+        <h2>🚢 ${esc(c.navio)}<small>${esc(c.companhia)} · ${esc(c.itinerario)}</small></h2>
+        <span class="tag warn">${esc(c.status)}</span>
+      </div>
+      <div class="bd">
+        <div class="kv">
+          <div class="item"><div class="k">Período</div><div class="v">${esc(c.periodo)}</div></div>
+          <div class="item"><div class="k">Cabine</div><div class="v">${esc(c.cabine)}</div></div>
+          <div class="item"><div class="k">Embarque</div><div class="v">${esc(c.embarque)}</div></div>
+          <div class="item"><div class="k">Desembarque</div><div class="v">${esc(c.desembarque)}</div></div>
+        </div>
+        <div class="note" style="margin-top:10px;font-size:11.5px">🛏️ ${esc(c.cabine_detalhe||"")}</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="hd"><h2>🗓️ Itinerário Dia a Dia</h2></div>
+      <div class="bd"><div class="porto-grid">${portosHtml}</div></div>
+    </div>
+    <div class="card">
+      <div class="hd"><h2>🎁 Pacotes Inclusos (Free At Sea)</h2><span class="tag ok">INCLUSO</span></div>
+      <div class="bd">
+        <ul class="plain">${pac}</ul>
+        <div class="note" style="margin-top:10px">💰 Gorjetas: ${esc(c.gorjetas||"")}</div>
+      </div>
+    </div>
+    ${pend?`<div class="card">
+      <div class="hd"><h2>⚠️ Pendências do Cruzeiro</h2><span class="tag warn">A RESOLVER</span></div>
+      <div class="bd">
+        <ul class="plain warn">${pend}</ul>
+        <div class="note warn">📞 ${esc(c.acao)}</div>
+      </div></div>`:""}
+  </div>`;
+}
+
+function tabDocumentos(){
+  return `<div class="grid">
+    <div class="card span2">
+      <div class="hd">
+        <h2>🛂 Documentos Pessoais</h2>
+        <span class="tag ${D.documentos_ok?"ok":"warn"}">${esc(D.documentos_status||"⚠️ VERIFICAR")}</span>
+      </div>
+      <div class="bd">
+        <table class="docs-table">
+          <tr><th>Documento</th><th>Fabiano</th><th>Renata</th></tr>
+          ${D.documentos.map(d=>`<tr>
+            <td>${esc(d.doc)}</td>
+            <td style="font-weight:600">${esc(d.fabiano)}</td>
+            <td style="font-weight:600">${esc(d.renata)}</td>
+          </tr>`).join("")}
+        </table>
+        <div class="note ok" style="margin-top:14px">✅ ${esc(D.documentos_nota||"")}</div>
+      </div>
+    </div>
+  </div>`;
+}
+
+function tabExperiencias(){
+  const exp=(D.experiencias||[]).map(e=>{
+    const pend=e.status.includes("⚠️");
+    return `<div class="exp">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:8px;flex-wrap:wrap">
+        <div class="etit">${esc(e.titulo)}</div>
+        <span class="tag ${pend?"warn":"ok"}">${esc(e.status)}</span>
+      </div>
+      <div class="edt">📅 ${esc(e.data)} · ⏱ ${esc(e.duracao)} · Saída ${esc(e.saida)} · Retorno ${esc(e.retorno)}</div>
+      <div class="erot">${esc(e.roteiro)}</div>
+      <div class="einc">
+        <span>✅ ${esc(e.inclui)}</span>
+        <span class="x">❌ ${esc(e.nao_inclui)}</span>
+      </div>
+    </div>`;
+  }).join("");
+  const cred=(D.cruzeiro.paradas||[]).map(p=>`
+    <div class="item"><div class="k">${esc(p.data)} — ${esc(p.porto)}</div>
+    <div class="v">US$ 50 em créditos NCL</div></div>`).join("");
+  return `<div class="grid">
+    <div class="card span2">
+      <div class="hd"><h2>🎡 Passeios e Eventos</h2></div>
+      <div class="bd">${exp}</div>
+    </div>
+    <div class="card">
+      <div class="hd"><h2>🌊 Créditos de Excursões nos Portos</h2>
+        <span class="tag ok">US$ 150 TOTAL</span></div>
+      <div class="bd">
+        <div class="kv">${cred}</div>
+        <div class="note">Reservar excursões com a NCL para garantir adaptação ao horário do navio.</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="hd"><h2>🚐 Transfers — Tour Viva</h2>
+        <span class="tag ok">INCLUSO</span></div>
+      <div class="bd">
+        <div style="font-size:11.5px;color:var(--mut);margin-bottom:8px">${esc((D.transfers||{}).grupo||"")}</div>
+        ${((D.transfers||{}).itens||[]).map(t=>`
+          <div class="tr-item">
+            <div class="tr-n">${t.n}</div>
+            <div class="tr-info">
+              <div class="tr-desc">${esc(t.descricao)}</div>
+              <div class="tr-det">📅 ${esc(t.data)} · ${esc(t.detalhe)}</div>
+            </div>
+            <span class="tag ok" style="font-size:10px">✅</span>
+          </div>`).join("")}
+        ${D.transfers.pendente?`<div class="note warn" style="margin-top:8px">⚠️ ${esc(D.transfers.pendente)}</div>`:""}
+      </div>
+    </div>
+  </div>`;
+}
+
+function tabFinanceiro(){
+  const f=D.financeiro||{};
+  const hoje=new Date();
+  const parc=(f.parcelas||[]).map(p=>{
+    const venc=new Date(p.vencimento.split("/").reverse().join("-"));
+    const dias=Math.ceil((venc-hoje)/864e5);
+    const urg=dias>=0&&dias<=7;
+    const pago=dias<0&&p.status.includes("A PAGAR");
+    return `<div class="parc" style="${urg?"border-color:var(--warn)":""}">
+      <div>
+        <div class="pl">${esc(p.descricao)}</div>
+        <div class="ps">Vencimento: ${esc(p.vencimento)} · ${esc(p.forma)}</div>
+        <div class="ps" style="margin-top:3px;color:${urg?"var(--warn)":"var(--mut)"}">
+          ${dias>=0?`${dias} dias restantes`:pago?"Vencido":""}
+        </div>
+      </div>
+      <div style="text-align:right">
+        <div class="pv">US$ ${(p.valor_usd||0).toLocaleString("pt-BR",{minimumFractionDigits:2})}</div>
+        <span class="tag ${urg?"warn":"ok"}">${esc(p.status)}</span>
+      </div>
+    </div>`;
+  }).join("");
+  const inc=(f.o_que_inclui||[]).map(i=>`<li>${esc(i)}</li>`).join("");
+  return `<div class="grid">
+    <div class="card">
+      <div class="hd"><h2>💰 Pacote Tour Viva</h2>
+        <span class="tag info">${esc(f.opcao_escolhida||"")}</span></div>
+      <div class="bd">
+        <div style="text-align:center;padding:16px 0 8px">
+          <div style="font-size:42px;font-weight:900;color:var(--gold)">
+            US$ ${(f.valor_total_usd||0).toLocaleString("pt-BR",{minimumFractionDigits:2})}
+          </div>
+          <div style="font-size:13px;color:var(--mut);margin-top:4px">
+            ${esc(f.estimativa_brl||"")}
+          </div>
+          <div style="font-size:11px;color:var(--mut);margin-top:2px">Câmbio ref.: ${esc(f.cambio_referencia||"")}</div>
+        </div>
+        <ul class="plain">${inc}</ul>
+        ${f.nao_inclui?`<div class="note warn" style="margin-top:10px">❌ Não inclui: ${esc(f.nao_inclui)}</div>`:""}
+      </div>
+    </div>
+    <div class="card">
+      <div class="hd"><h2>📅 Parcelas</h2></div>
+      <div class="bd">${parc}</div>
+    </div>
+    <div class="card">
+      <div class="hd"><h2>🧭 Operadora</h2><span class="tag ok">CONTATO</span></div>
+      <div class="bd"><div class="kv">
+        <div class="item"><div class="k">Agência</div><div class="v">${esc(D.operadora.nome)}</div></div>
+        <div class="item"><div class="k">Responsável</div><div class="v">${esc(D.operadora.contato)}</div></div>
+        <div class="item"><div class="k">WhatsApp</div><div class="v">${esc(D.operadora.telefone)}</div></div>
+        <div class="item"><div class="k">E-mail</div><div class="v">${esc(D.operadora.email)}</div></div>
+        <div class="item"><div class="k">Cidade</div><div class="v">${esc(D.operadora.cidade)}</div></div>
+        <div class="item"><div class="k">Consolidadora</div><div class="v">${esc(D.operadora.consolidadora)}</div></div>
+      </div></div>
+    </div>
+  </div>`;
+}
+
+function tabGeral(){
+  const dias=diasRestantes(D.viagem.data_ida);
+  const azulOk=!D.logistica.alerta.includes("NÃO emitidas");
+  return `
+  <div class="hero">
+    <div>
+      <h1>✈️ <span>${esc(D.viagem.titulo)}</span></h1>
+      <div class="sub">👫 ${D.viagem.viajantes.map(esc).join(" &nbsp;·&nbsp; ")}</div>
+      <div class="badges">
+        <span class="badge">📅 ${esc(D.viagem.periodo)}</span>
+        <span class="badge">🛫 Aeromexico · Premier Clássica</span>
+        <span class="badge">🛬 American Airlines · Premium Economy</span>
+        <span class="badge">🏨 3 hotéis · 10 noites</span>
+        <span class="badge">🚢 Norwegian Encore · Riviera Mexicana</span>
+        <span class="badge alerta">⚠️ Azul: bilhetes não emitidos</span>
+        <span class="badge alerta">⚠️ Pagto Tour Viva: 07/08</span>
+      </div>
+    </div>
+    <div class="count"><div class="n">${dias}</div><div class="l">dias para o voo</div></div>
+  </div>
+  <div class="tl">${D.timeline.map(s=>`
+    <div class="step ${s.status==="alerta"?"alerta":""}">
+      <div class="d">${esc(s.data)}</div>
+      <div class="t">${esc(s.titulo)}</div>
+      <div class="s">${esc(s.sub)}</div>
+    </div>`).join("")}</div>`;
+}
+
+const ABAS=[
+  {id:"geral",   label:"🗓️ Visão Geral",   fn:()=>tabGeral()},
+  {id:"aereos",  label:"✈️ Aéreos",         fn:()=>tabAereos()},
+  {id:"hoteis",  label:"🏨 Hotéis",         fn:()=>tabHoteis()},
+  {id:"cruzeiro",label:"🚢 Cruzeiro",       fn:()=>tabCruzeiro()},
+  {id:"exp",     label:"🎡 Experiências",   fn:()=>tabExperiencias()},
+  {id:"docs",    label:"🛂 Documentos",     fn:()=>tabDocumentos()},
+  {id:"fin",     label:"💰 Financeiro",     fn:()=>tabFinanceiro()},
+];
+
+function render(){
+  if(!D)return;
+  const tabsHtml=ABAS.map(a=>`
+    <div class="tab ${_aba===a.id?"ativo":""}" onclick="mudarAba('${a.id}')">${a.label}</div>`).join("");
+  const aba=ABAS.find(a=>a.id===_aba)||ABAS[0];
+  const html=`
+    <div class="tabs">${tabsHtml}</div>
+    <div id="pane">${aba.fn()}</div>
+    <footer>
+      Dados: ${esc(D.atualizado_em)} · Versão publicada no GitHub Pages
+      &nbsp;<span id="status">●</span>
+    </footer>`;
+  document.getElementById("app").innerHTML=html;
+  marcarStatus(_sseOn);
+}
+
+function mudarAba(id){_aba=id;render()}
+function marcarStatus(on){
+  const el=document.getElementById("status");
+  if(el){el.className=on?"on":"";el.textContent=on?"● ao vivo":"○ offline"}
+}
+async function load(){
+  try{const r=await fetch("dados.json",{cache:"no-store"});D=await r.json();render();}catch(e){}
+}
+function sse(){
+  try{
+    const es=null // EventSource removido (site estático);
+    es.onopen=()=>{_sseOn=true;marcarStatus(true)};
+    es.onmessage=()=>load();
+    es.onerror=()=>{_sseOn=false;marcarStatus(false);es.close();setTimeout(sse,5000)};
+  }catch(e){setTimeout(sse,5000)}
+}
+load();sse();
+// sem polling — site estático
+setInterval(()=>{if(D)render()},60*60*1000);
+</script>
+</body>
+</html>
