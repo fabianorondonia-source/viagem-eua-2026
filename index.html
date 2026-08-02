@@ -518,14 +518,14 @@ async function load(){
 }
 function sse(){
   try{
-    const es=null // EventSource removido (site estático);
+    const es=null;
     es.onopen=()=>{_sseOn=true;marcarStatus(true)};
     es.onmessage=()=>load();
     es.onerror=()=>{_sseOn=false;marcarStatus(false);es.close();setTimeout(sse,5000)};
   }catch(e){setTimeout(sse,5000)}
 }
 load();sse();
-// sem polling — site estático
+// sem polling — estático
 setInterval(()=>{if(D)render()},60*60*1000);
 </script>
 </body>
