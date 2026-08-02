@@ -24,7 +24,7 @@
     {"data": "01–05/11", "titulo": "Las Vegas", "sub": "Fontainebleau · 4 noites", "status": "ok"},
     {"data": "02/11", "titulo": "City Tour Las Vegas", "sub": "Strip, Fremont, Bellagio · 09h–17h", "status": "ok"},
     {"data": "05–08/11", "titulo": "Las Vegas", "sub": "Park MGM · 3 noites", "status": "ok"},
-    {"data": "06–08/11", "titulo": "PBR Teams Championship", "sub": "T-Mobile Arena · ao lado do Park MGM", "status": "alerta"},
+    {"data": "06/11", "titulo": "PBR Teams Championship", "sub": "T-Mobile Arena · ingressos incluídos · ao lado do Park MGM", "status": "ok"},
     {"data": "08 NOV", "titulo": "Voo de Retorno", "sub": "LAS → DFW → GRU · American Airlines Premium Economy", "status": "ok"},
     {"data": "10 NOV", "titulo": "Retorno a Cacoal", "sub": "Azul · bilhetes não emitidos", "status": "alerta"}
   ],
@@ -240,14 +240,14 @@
     {
       "n": 4,
       "titulo": "PBR Teams Championship",
-      "data": "06 a 08/11 (Sex–Dom)",
-      "saida": "—",
+      "data": "06/11 (Sex)",
+      "saida": "19:45",
       "retorno": "—",
-      "duracao": "3 dias de evento",
-      "inclui": "—",
-      "nao_inclui": "Ingressos a adquirir separadamente via AXS",
-      "roteiro": "T-Mobile Arena · Las Vegas · Final da temporada da liga de equipes de montaria em touros · Park MGM fica ao lado da arena",
-      "status": "⚠️ Ingressos a adquirir (AXS)"
+      "duracao": "Portas abertas 18:15 · Show 19:45",
+      "inclui": "Ingressos incluídos no pacote (agência)",
+      "nao_inclui": "Transporte até a arena (Park MGM fica ao lado — a pé)",
+      "roteiro": "T-Mobile Arena · Las Vegas · Final da temporada PBR Teams · Park MGM fica literalmente ao lado da arena — só atravessar",
+      "status": "✅ Ingressos comprados pela agência"
     }
   ],
   "financeiro": {
@@ -265,9 +265,10 @@
       "Transfer Fontainebleau → Park MGM (05/11)",
       "City Tour 1 — Hollywood e Downtown (23/10)",
       "City Tour 2 — Praias e Litoral (24/10)",
-      "City Tour Las Vegas (02/11)"
+      "City Tour Las Vegas (02/11)",
+      "Ingressos PBR Teams Championship (06/11 · T-Mobile Arena)"
     ],
-    "nao_inclui": "Ingressos para shows, passeio de helicóptero, almoços dos tours, despesas pessoais",
+    "nao_inclui": "Passeio de helicóptero, almoços dos tours, despesas pessoais",
     "parcelas": [
       {
         "n": 1,
