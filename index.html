@@ -173,6 +173,48 @@ footer{margin-top:24px;text-align:center;color:var(--mut);font-size:11.5px;line-
 </style>
 </head>
 <body>
+
+<!-- TELA DE SENHA -->
+<div id="gate" style="position:fixed;inset:0;z-index:9999;background:linear-gradient(160deg,#070d20 0%,#0a1128 50%,#0c1533 100%);display:flex;align-items:center;justify-content:center">
+  <div style="text-align:center;max-width:320px;width:90%;padding:20px">
+    <div style="font-size:48px;margin-bottom:12px">✈️</div>
+    <h2 style="color:#f0a832;font-size:22px;font-weight:800;letter-spacing:.5px;margin-bottom:6px">Viagem EUA 2026</h2>
+    <p style="color:#8b97c0;font-size:13px;margin-bottom:28px">Fabiano &amp; Renata · Out/Nov 2026</p>
+    <input id="pwd" type="password" placeholder="senha" autocomplete="current-password"
+      style="width:100%;padding:13px 16px;border-radius:14px;border:1px solid #22305e;background:#111a3a;color:#e8ecf8;font-size:17px;outline:none;text-align:center;letter-spacing:3px;box-sizing:border-box">
+    <button onclick="checkPwd()"
+      style="width:100%;margin-top:12px;padding:13px;border-radius:14px;border:none;background:#4f8ff7;color:#fff;font-size:15px;font-weight:700;cursor:pointer;transition:opacity .15s"
+      onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">
+      Entrar
+    </button>
+    <div id="err" style="color:#ff6b6b;font-size:12px;margin-top:10px;min-height:16px"></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  if(sessionStorage.getItem('v26ok')==='1'){
+    document.getElementById('gate').style.display='none';
+  }
+  document.getElementById('pwd').addEventListener('keydown',function(e){
+    if(e.key==='Enter') checkPwd();
+  });
+  // foca o campo automaticamente
+  setTimeout(function(){document.getElementById('pwd').focus()},100);
+})();
+function checkPwd(){
+  if(document.getElementById('pwd').value==='eua2026'){
+    sessionStorage.setItem('v26ok','1');
+    document.getElementById('gate').style.display='none';
+  } else {
+    document.getElementById('err').textContent='Senha incorreta — tente novamente';
+    document.getElementById('pwd').value='';
+    document.getElementById('pwd').focus();
+  }
+}
+</script>
+<!-- FIM TELA DE SENHA -->
+
 <div class="wrap"><div id="app">Carregando…</div></div>
 <script>
 let D=null, _aba="geral", _sseOn=false;
