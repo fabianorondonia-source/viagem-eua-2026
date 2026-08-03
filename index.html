@@ -499,7 +499,16 @@ function tabFinanceiro(){
         <div class="item"><div class="k">E-mail</div><div class="v">${esc(D.operadora.email)}</div></div>
         <div class="item"><div class="k">Cidade</div><div class="v">${esc(D.operadora.cidade)}</div></div>
         <div class="item"><div class="k">Consolidadora</div><div class="v">${esc(D.operadora.consolidadora)}</div></div>
-      </div></div>
+      </div>
+      ${D.operadora.proposta_url?`<a href="${D.operadora.proposta_url}" target="_blank" rel="noopener"
+        style="display:inline-flex;align-items:center;gap:8px;margin-top:14px;padding:11px 20px;
+          border-radius:12px;background:#1a9e5c;color:#fff;font-size:14px;font-weight:700;
+          text-decoration:none;cursor:pointer;transition:background .15s;box-shadow:0 2px 10px rgba(26,158,92,.35)"
+        onmouseover="this.style.background='#178850'"
+        onmouseout="this.style.background='#1a9e5c'">
+        📄 Ver Proposta Genitravel
+      </a>`:""}
+      </div>
     </div>
   </div>`;
 }
@@ -575,7 +584,7 @@ function sse(){
   }catch(e){setTimeout(sse,5000)}
 }
 load();sse();
-// sem polling — estático
+// sem polling
 setInterval(()=>{if(D)render()},60*60*1000);
 </script>
 </body>
