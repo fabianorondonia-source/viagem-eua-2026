@@ -268,13 +268,13 @@ function hotelCard(h){
     ["Contato local",h.contato_local],["Emergência",h.emergencia]]
     .filter(Boolean).map(([k,v])=>`<div class="item"><div class="k">${k}</div><div class="v">${esc(v)}</div></div>`).join("");
   const dest=h.destaques?`<div class="hdest">⭐ ${esc(h.destaques)}</div>`:"";
-  const mapa=h.maps_url?`<a href="${esc(h.maps_url)}" target="_blank" rel="noopener"
-    style="display:inline-flex;align-items:center;gap:6px;margin-top:12px;padding:8px 16px;
-      border-radius:10px;border:1px solid rgba(79,143,247,.4);background:rgba(79,143,247,.1);
-      color:#7ab4ff;font-size:12.5px;font-weight:600;text-decoration:none;transition:background .15s"
-    onmouseover="this.style.background='rgba(79,143,247,.2)'"
-    onmouseout="this.style.background='rgba(79,143,247,.1)'">
-    🗺️ Abrir no Google Maps
+  const mapa=h.maps_url?`<a href="${h.maps_url}" target="_blank" rel="noopener"
+    style="display:inline-flex;align-items:center;gap:8px;margin-top:14px;padding:11px 20px;
+      border-radius:12px;background:#1a9e5c;color:#fff;font-size:14px;font-weight:700;
+      text-decoration:none;cursor:pointer;transition:background .15s;box-shadow:0 2px 10px rgba(26,158,92,.35)"
+    onmouseover="this.style.background='#178850'"
+    onmouseout="this.style.background='#1a9e5c'">
+    📍 Ver no Google Maps
   </a>`:"";
   return `<div class="card hotel" style="--hc:${h.cor}">
     <div class="hd">
