@@ -302,20 +302,46 @@ function tabAereos(){
 }
 
 function tabHoteis(){
+  const principais=(D.hoteis||[]).filter(h=>h.tipo!=="escala_sp");
+  const sp=(D.hoteis||[]).filter(h=>h.tipo==="escala_sp");
+  const spCards=sp.map(h=>{
+    const preco=h.preco_brl?`<div class="item"><div class="k">Preço total</div><div class="v">${h.preco_detalhe||"—"}</div></div>`:"";
+    const cancel=h.cancelamento?`<div class="item"><div class="k">Cancelamento</div><div class="v">${esc(h.cancelamento)}</div></div>`:"";
+    const shuttle=h.shuttle?`<div class="item"><div class="k">Shuttle</div><div class="v">${esc(h.shuttle)}</div></div>`:"";
+    const mapa=h.maps_url?`<a href="${h.maps_url}" target="_blank" rel="noopener"
+      style="display:inline-flex;align-items:center;gap:6px;margin-top:12px;padding:9px 16px;
+        border-radius:10px;background:#1a9e5c;color:#fff;font-size:13px;font-weight:700;
+        text-decoration:none;transition:background .15s"
+      onmouseover="this.style.background='#178850'"
+      onmouseout="this.style.background='#1a9e5c'">📍 Ver no Google Maps</a>`:"";
+    return `<div style="border:1px solid var(--border);border-radius:14px;padding:14px;margin-top:10px;background:var(--card2)">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:8px;flex-wrap:wrap;margin-bottom:8px">
+        <div>
+          <div style="font-size:14px;font-weight:700">🏨 ${esc(h.nome)}</div>
+          <div style="font-size:11px;color:var(--mut);margin-top:2px">${esc(h.role||h.cidade)}</div>
+        </div>
+        <span class="tag ok">✅ ${h.noites} noite${h.noites>1?"s":""}</span>
+      </div>
+      <div class="kv">
+        <div class="item"><div class="k">Check-in</div><div class="v">${esc(h.checkin)}</div></div>
+        <div class="item"><div class="k">Check-out</div><div class="v">${esc(h.checkout)}</div></div>
+        <div class="item"><div class="k">Aposento</div><div class="v">${esc(h.aposento)}</div></div>
+        <div class="item"><div class="k">Refeições</div><div class="v">${esc(h.refeicoes)}</div></div>
+        <div class="item"><div class="k">Reserva Booking</div><div class="v">${esc(h.reserva)} · ${esc(h.localizador)}</div></div>
+        <div class="item"><div class="k">Aeroporto</div><div class="v">${esc(h.distancia_aeroporto)}</div></div>
+        ${preco}${cancel}${shuttle}
+      </div>
+      ${mapa}
+    </div>`;
+  }).join("");
+  const spSection=sp.length?`<div class="card span2">
+    <div class="hd"><h2>🏨 Hotéis São Paulo — Escalas GRU</h2>
+      <span class="tag ok">✅ RESERVADOS</span></div>
+    <div class="bd">${spCards}</div>
+  </div>`:"";
   return `<div class="grid">
-    ${D.hoteis.map(hotelCard).join("")}
-    <div class="card">
-      <div class="hd"><h2>🏨 Hotéis São Paulo — Escalas GRU</h2>
-        <span class="tag warn">⚠️ A RESERVAR</span></div>
-      <div class="bd">
-        ${(D.hoteis_pendentes||[]).map(h=>`
-          <div class="kv kv1" style="margin-top:8px">
-            <div class="item"><div class="k">${esc(h.quando)} · ${esc(h.noites)}</div>
-              <div class="v">${esc(h.onde)}</div>
-              <div style="font-size:11px;color:var(--mut);margin-top:4px">${esc(h.obs)}</div>
-            </div></div>`).join("")}
-        <div class="note warn">Nenhuma reserva em São Paulo feita até agora — nem ida nem retorno.</div>
-      </div></div>
+    ${principais.map(hotelCard).join("")}
+    ${spSection}
   </div>`;
 }
 
@@ -584,7 +610,7 @@ function sse(){
   }catch(e){setTimeout(sse,5000)}
 }
 load();sse();
-// sem polling
+// sem polling — estático
 setInterval(()=>{if(D)render()},60*60*1000);
 </script>
 </body>
