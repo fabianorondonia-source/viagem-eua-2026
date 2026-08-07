@@ -18,7 +18,7 @@ git -C "$SITE" config user.name "Fabiano Roberto"
 
 git -C "$SITE" add -A
 git -C "$SITE" diff --cached --quiet && echo "ℹ️  Nada novo para commitar." || \
-  git -C "$SITE" commit -m "Hotéis SP confirmados — Pullman GRU (ida) + Slaviero GRU (retorno)"
+  git -C "$SITE" commit -m "Hotéis SP confirmados — Pullman GRU (ida) + Hampton by Hilton GRU (retorno)"
 
 echo "▶ Push..."
 git -C "$SITE" push origin main && echo "✅ Publicado!" || echo "❌ Erro no push"
