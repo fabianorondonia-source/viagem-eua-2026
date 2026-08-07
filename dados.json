@@ -1,11 +1,13 @@
 {
-  "atualizado_em": "02/08/2026",
+  "atualizado_em": "07/08/2026",
   "fontes": [
     "Roteiro_EUA_2026_v2_Milhas (1).pdf",
     "FABIANO EMISSOES VIVA (1).pdf",
     "Genitravel proposta 91684902/2 — roteiro, hoteis, cruzeiro, transfer, experiencias, resumo financeiro (02/08/2026)",
     "Base_Oficial_Viagem_EUA_Mexico_Cruzeiro.md",
-    "Screenshot Free at Sea Plus — comprado para Fabiano e Renata (02/08/2026)"
+    "Screenshot Free at Sea Plus — comprado para Fabiano e Renata (02/08/2026)",
+    "Booking.com confirmação 5534.266.835 — Pullman Sao Paulo Guarulhos Airport (07/08/2026)",
+    "Booking.com confirmação 5548.365.562 — Slaviero Hotel Guarulhos Aeroporto (07/08/2026)"
   ],
   "viagem": {
     "titulo": "EUA · México · Cruzeiro 2026",
@@ -15,7 +17,7 @@
     "data_volta": "2026-11-09"
   },
   "timeline": [
-    {"data": "20 OUT", "titulo": "Saída de Cacoal", "sub": "Azul → São Paulo · bilhetes não emitidos", "status": "alerta"},
+    {"data": "20 OUT", "titulo": "Saída de Cacoal", "sub": "Azul → São Paulo · bilhetes não emitidos · Pullman GRU reservado (20–22/10)", "status": "alerta"},
     {"data": "22 OUT", "titulo": "Voo de Ida", "sub": "GRU → MEX → LAX · Aeromexico Premier Clássica", "status": "ok"},
     {"data": "22–25/10", "titulo": "Los Angeles", "sub": "InterContinental Downtown · 3 noites", "status": "ok"},
     {"data": "23/10", "titulo": "City Tour LA", "sub": "Hollywood e Downtown · 09h–17h", "status": "ok"},
@@ -26,6 +28,7 @@
     {"data": "05–08/11", "titulo": "Las Vegas", "sub": "Park MGM · 3 noites", "status": "ok"},
     {"data": "06/11", "titulo": "PBR Teams Championship", "sub": "T-Mobile Arena · ingressos incluídos · ao lado do Park MGM", "status": "ok"},
     {"data": "08 NOV", "titulo": "Voo de Retorno", "sub": "LAS → DFW → GRU · American Airlines Premium Economy", "status": "ok"},
+    {"data": "09 NOV", "titulo": "Escala SP — Retorno", "sub": "Slaviero GRU reservado · voo Cacoal 10/11", "status": "ok"},
     {"data": "10 NOV", "titulo": "Retorno a Cacoal", "sub": "Azul · bilhetes não emitidos", "status": "alerta"}
   ],
   "voo_ida": {
@@ -123,7 +126,7 @@
       "refeicoes": "Sem refeições",
       "adultos": "2 adultos · 0 crianças",
       "reserva": "16394518865",
-      "localizador": "1129385-1133926",
+      "localizador": "1129385-1933926",
       "voucher": "1712341/1",
       "emissao": "03/06/2026",
       "contato_local": "30352811",
@@ -132,6 +135,61 @@
       "destaques": "Localizado ao lado da T-Mobile Arena (PBR!) · Teatro Dolby Live at Park MGM · Bavette's Steakhouse & Bar · BetMGM Sportsbook & Bar",
       "maps_url": "https://www.google.com/maps/search/?api=1&query=Park+MGM+Las+Vegas,+3770+S+Las+Vegas+Blvd,+Las+Vegas,+NV",
       "cor": "#c2762a"
+    },
+    {
+      "nome": "Pullman Sao Paulo Guarulhos Airport",
+      "cidade": "Guarulhos, SP",
+      "tipo": "escala_sp",
+      "role": "Escala de ida — antes do voo internacional (22/10 às 09:40)",
+      "endereco": "Rod. Hélio Smidt s/n Setor 1 Lt 2, Guarulhos, SP, CEP 07190-100",
+      "checkin": "20 Out 2026 · a partir das 15:00",
+      "checkout": "22 Out 2026 · até as 12:00",
+      "noites": 2,
+      "aposento": "Quarto Deluxe com Cama Queen-size",
+      "refeicoes": "Sem refeições incluídas",
+      "adultos": "2 adultos",
+      "reserva": "5534.266.835",
+      "localizador": "PIN 2601",
+      "voucher": "Booking.com",
+      "emissao": "07/08/2026",
+      "cancelamento": "Grátis até 19/10/2026 · R$ 1.330,00 após 20/10",
+      "preco_brl": 2887.50,
+      "preco_detalhe": "R$ 2.750,00 + ISS 5% (R$ 137,50) · pagar na saída",
+      "contato_local": "+55 11 2124 5800",
+      "emergencia": "+55 11 2124 5800",
+      "estacionamento": "R$ 55,00/dia",
+      "distancia_aeroporto": "Hotel dentro do complexo GRU · Rod. Hélio Smidt",
+      "destaques": "Hotel 5★ Accor dentro do aeroporto GRU · Quarto Deluxe Queen-size · Wi-Fi gratuito · Cancelamento grátis até 19/10 · Pagar na saída",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Pullman+Sao+Paulo+Guarulhos+Airport",
+      "cor": "#2a5c8a"
+    },
+    {
+      "nome": "Slaviero Hotel Guarulhos Aeroporto",
+      "cidade": "Guarulhos, SP",
+      "tipo": "escala_sp",
+      "role": "Escala de retorno — após chegada internacional (09/11 às 08:30)",
+      "endereco": "Rua Rafael Balzani, 32, Guarulhos, SP, CEP 07020-091",
+      "checkin": "09 Nov 2026 · 14:00–23:30",
+      "checkout": "10 Nov 2026 · até as 12:00",
+      "noites": 1,
+      "aposento": "Quarto Duplo Superior",
+      "refeicoes": "Café da manhã incluído",
+      "adultos": "2 adultos",
+      "reserva": "5548.365.562",
+      "localizador": "PIN 8610",
+      "voucher": "Booking.com",
+      "emissao": "07/08/2026",
+      "cancelamento": "Grátis até 07/11/2026 · R$ 489,04 após 08/11",
+      "preco_brl": 489.04,
+      "preco_detalhe": "R$ 465,75 + ISS 5% (R$ 23,29) · pagar na saída",
+      "contato_local": "+55 11 2475 7515",
+      "emergencia": "+55 11 2475 7515",
+      "estacionamento": "R$ 35,00/dia",
+      "shuttle": "Shuttle aeroporto · Terminal 2 – Chegadas · a cada hora",
+      "distancia_aeroporto": "Shuttle gratuito · Terminal 2 – Chegadas · a cada hora",
+      "destaques": "Café da manhã incluído · Shuttle aeroporto (Terminal 2, a cada hora) · Wi-Fi gratuito · Cancelamento grátis até 07/11 · Pagar na saída",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Slaviero+Hotel+Guarulhos+Aeroporto",
+      "cor": "#5c3d8a"
     }
   ],
   "cruzeiro": {
@@ -201,7 +259,7 @@
       {"n": 4, "descricao": "Transfer Fontainebleau → Park MGM", "data": "05/11", "detalhe": "Troca de hotel", "status": "✅ Incluído"},
       {"n": 5, "descricao": "Transfer Park MGM → Aeroporto LAS", "data": "08/11", "detalhe": "Receptivo de saída conforme voo", "status": "✅ Incluído"}
     ],
-    "pendente": "GRU ↔ hotel em São Paulo (escalas 20–22/10 e 09–10/11) — não documentado"
+    "pendente": "✅ SP resolvido — Pullman GRU ida (20–22/10, reserva 5534.266.835) · Slaviero GRU retorno (09–10/11, reserva 5548.365.562)"
   },
   "experiencias": [
     {
@@ -297,10 +355,7 @@
       {"opcao": "Casal · retorno 08–09/11 ← ESCOLHIDA", "valor": "US$ 1.998"}
     ]
   },
-  "hoteis_pendentes": [
-    {"quando": "Ida — 20 → 22 Out 2026", "noites": "2 noites", "onde": "São Paulo / região de Guarulhos (GRU)", "obs": "Azul chega 20/10; voo internacional sai de GRU 22/10 às 09:40 — preferir hotel perto do aeroporto"},
-    {"quando": "Retorno — 09 → 10 Nov 2026", "noites": "1 noite", "onde": "São Paulo / região de Guarulhos (GRU)", "obs": "Chegada internacional em GRU 09/11 às 08:30; voo Azul para Cacoal 10/11"}
-  ],
+  "hoteis_pendentes": [],
   "logistica": {
     "itens": [
       {"k": "Origem", "v": "Cacoal, RO"},
