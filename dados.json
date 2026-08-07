@@ -28,7 +28,7 @@
     {"data": "05–08/11", "titulo": "Las Vegas", "sub": "Park MGM · 3 noites", "status": "ok"},
     {"data": "06/11", "titulo": "PBR Teams Championship", "sub": "T-Mobile Arena · ingressos incluídos · ao lado do Park MGM", "status": "ok"},
     {"data": "08 NOV", "titulo": "Voo de Retorno", "sub": "LAS → DFW → GRU · American Airlines Premium Economy", "status": "ok"},
-    {"data": "09 NOV", "titulo": "Escala SP — Retorno", "sub": "Slaviero GRU reservado · voo Cacoal 10/11", "status": "ok"},
+    {"data": "09 NOV", "titulo": "Escala SP — Retorno", "sub": "Hampton by Hilton GRU reservado · voo Cacoal 10/11", "status": "ok"},
     {"data": "10 NOV", "titulo": "Retorno a Cacoal", "sub": "Azul · bilhetes não emitidos", "status": "alerta"}
   ],
   "voo_ida": {
