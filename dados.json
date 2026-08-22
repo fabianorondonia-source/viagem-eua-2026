@@ -345,7 +345,7 @@
         "valor_usd": 999.00,
         "vencimento": "27/09/2026",
         "forma": "PIX · câmbio do dia",
-        "status": "⚠️ A PAGAR"
+        "status": "✅ PAGO"
       }
     ],
     "opcoes_disponiveis": [
