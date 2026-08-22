@@ -337,7 +337,7 @@
         "valor_usd": 999.00,
         "vencimento": "07/08/2026",
         "forma": "PIX · câmbio do dia",
-        "status": "⚠️ A PAGAR (vence em 5 dias!)"
+        "status": "✅ PAGO"
       },
       {
         "n": 2,
