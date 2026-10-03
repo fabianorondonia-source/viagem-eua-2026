@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "07/08/2026",
+  "atualizado_em": "03/10/2026",
   "fontes": [
     "Roteiro_EUA_2026_v2_Milhas (1).pdf",
     "FABIANO EMISSOES VIVA (1).pdf",
@@ -7,7 +7,8 @@
     "Base_Oficial_Viagem_EUA_Mexico_Cruzeiro.md",
     "Screenshot Free at Sea Plus — comprado para Fabiano e Renata (02/08/2026)",
     "Booking.com confirmação 5534.266.835 — Pullman Sao Paulo Guarulhos Airport (07/08/2026)",
-    "Booking.com confirmação 6498.271.276 — Hampton by Hilton Guarulhos Airport (07/08/2026)"
+    "Booking.com confirmação 6498.271.276 — Hampton by Hilton Guarulhos Airport (07/08/2026)",
+    "CamScanner 03-10-2026 08.35.pdf — Roteiro Personalizado Final Milhas Viagens & Turismo (03/10/2026)"
   ],
   "viagem": {
     "titulo": "EUA · México · Cruzeiro 2026",
@@ -26,7 +27,10 @@
     {"data": "01–05/11", "titulo": "Las Vegas", "sub": "Fontainebleau · 4 noites", "status": "ok"},
     {"data": "02/11", "titulo": "City Tour Las Vegas", "sub": "Strip, Fremont, Bellagio · 09h–17h", "status": "ok"},
     {"data": "05–08/11", "titulo": "Las Vegas", "sub": "Park MGM · 3 noites", "status": "ok"},
+    {"data": "03/11", "titulo": "Dia livre · Compras", "sub": "Las Vegas North Premium Outlets · 170+ lojas · ~10 min do Fontainebleau · levar mala vazia!", "status": "ok"},
+    {"data": "04/11", "titulo": "Dia livre · Tour Hotéis", "sub": "Bellagio → Caesars → Paris LV → Venetian a pé · NY-NY, Luxor, Mandalay Bay no 2º trecho", "status": "ok"},
     {"data": "06/11", "titulo": "PBR Teams Championship", "sub": "T-Mobile Arena · ingressos incluídos · ao lado do Park MGM", "status": "ok"},
+    {"data": "07/11", "titulo": "Dia livre", "sub": "Grand Canyon de ônibus ou helicóptero · ou Forum Shops + Fremont Street", "status": "ok"},
     {"data": "08 NOV", "titulo": "Voo de Retorno", "sub": "LAS → DFW → GRU · American Airlines Premium Economy", "status": "ok"},
     {"data": "09 NOV", "titulo": "Escala SP — Retorno", "sub": "Hampton by Hilton GRU reservado · voo Cacoal 10/11", "status": "ok"},
     {"data": "10 NOV", "titulo": "Retorno a Cacoal", "sub": "Azul · bilhetes não emitidos", "status": "alerta"}
@@ -92,6 +96,12 @@
       "emergencia": "55-11-3035-2811",
       "distancia_aeroporto": "18 km do LAX",
       "destaques": "Bar Spire 73 na cobertura (bar ao ar livre mais alto do Hemisfério Ocidental) · Restaurante La Boucherie · Microsoft Theater e Staples Center a 900m",
+      "facility_fee": "~US$ 45 + impostos/noite",
+      "facility_fee_credito": "Crédito de US$ 25/dia no La Boucherie e no Spire 73",
+      "caucao": "US$ 150 no check-in · liberado em 3–5 dias úteis após checkout",
+      "valet": "US$ 65–72/noite",
+      "telefone": "+1 213 688 7777",
+      "nota_custos": "O facility fee (~US$ 45) é cobrado diariamente no cartão — use o crédito de US$ 25/dia no La Boucherie ou Spire 73 para aproveitar ao máximo.",
       "maps_url": "https://www.google.com/maps/search/?api=1&query=InterContinental+Los+Angeles+Downtown,+900+Wilshire+Blvd,+Los+Angeles,+CA",
       "cor": "#0e7c6b"
     },
@@ -112,6 +122,12 @@
       "contato_local": "30352811",
       "emergencia": "55-11-3035-2811",
       "destaques": "MICHELIN Key Award Hotel · Cassino · Spa · 5 min do The Venetian · 2,7 km da Sphere · 2,9 km do Colosseum at Caesars Palace",
+      "resort_fee": "US$ 55 + impostos (~US$ 62/noite)",
+      "caucao": "US$ 150/noite · liberado após checkout",
+      "checkin_dica": "Usar a North Entrance para check-in (evitar fila principal)",
+      "monorail": "Estação SAHARA do Las Vegas Monorail ao lado do hotel",
+      "vegas_loop": "Las Vegas Loop (Tesla) gratuito a partir do hotel",
+      "nota_custos": "Resort fee (~US$ 62/noite) cobrado separadamente. Check-in pela North Entrance. Monorail SAHARA ao lado.",
       "maps_url": "https://www.google.com/maps/search/?api=1&query=Fontainebleau+Las+Vegas,+2777+S+Las+Vegas+Blvd,+Las+Vegas,+NV",
       "cor": "#6d4fc2"
     },
@@ -133,6 +149,11 @@
       "emergencia": "55-11-3035-2811",
       "distancia_aeroporto": "4,8 km do Harry Reid (LAS)",
       "destaques": "Localizado ao lado da T-Mobile Arena (PBR!) · Teatro Dolby Live at Park MGM · Bavette's Steakhouse & Bar · BetMGM Sportsbook & Bar",
+      "resort_fee": "US$ 50 + impostos (~US$ 57/noite)",
+      "caucao": "~US$ 100/dia no check-in",
+      "parking_self": "US$ 20–25/dia (self-parking)",
+      "valet": "US$ 40/dia",
+      "nota_custos": "Resort fee (~US$ 57/noite). T-Mobile Arena a 5 min a pé — ideal para o PBR (06/11).",
       "maps_url": "https://www.google.com/maps/search/?api=1&query=Park+MGM+Las+Vegas,+3770+S+Las+Vegas+Blvd,+Las+Vegas,+NV",
       "cor": "#c2762a"
     },
@@ -242,6 +263,66 @@
       "✅ Crédito de US$ 50 por porto em excursões NCL · US$ 150 total (3 portos)"
     ],
     "gorjetas": "US$ 28,50 por pessoa por dia · estimativa: 2 pax × 7 noites = US$ 399",
+    "navio_info": {
+      "lancamento": "2019 · reformado 2024",
+      "classe": "Breakaway Plus",
+      "passageiros": "~3.960",
+      "tonelagem": "169.000 GT",
+      "restaurantes": "~20 restaurantes a bordo",
+      "bares": "+15 bares e lounges"
+    },
+    "embarque_detalhe": "Los Angeles World Cruise Center · San Pedro, CA · ~40 min do InterContinental Downtown · Embarque encerra antes das 16:00 · Documentos e passaporte na bagagem de mão",
+    "dress_code_jantares": "Smart casual — calça comprida e camisa ou polo; vestido ou conjunto. Sem bermuda, regata ou chinelo.",
+    "jantares_reservados": [
+      {"data": "26/10 · Dom · Navegação", "restaurante": "Le Bistro", "horario": "20:30", "estilo": "Cozinha francesa clássica", "status": "✅ Reserva confirmada"},
+      {"data": "30/10 · Qui · Navegação", "restaurante": "Cagney's Steakhouse", "horario": "20:30", "estilo": "Carnes nobres", "status": "✅ Reserva confirmada"},
+      {"data": "31/10 · Sex · Halloween", "restaurante": "Onda by Scarpetta", "horario": "20:30", "estilo": "Cozinha italiana contemporânea", "status": "✅ Reserva confirmada"}
+    ],
+    "festas_a_bordo": [
+      {"nome": "Sail Away Party", "data": "25/10 — Partida de LA", "descricao": "Festa de partida no deck às 16:00"},
+      {"nome": "Glow Party", "data": "A confirmar a bordo", "descricao": "Roupa branca e neon — levar roupa branca!"},
+      {"nome": "Festa Halloween", "data": "31/10 — Última noite", "descricao": "Fantasia opcional. Antes de dormir: malas na porta da cabine."},
+      {"nome": "Festas Décadas (70s/80s)", "data": "A confirmar a bordo", "descricao": "Acompanhar programação no app Norwegian"}
+    ],
+    "nota_fuso": "⚠️ Na madrugada de 01/11 os EUA saem do horário de verão: relógios voltam 1 hora automaticamente. A partir de 01/11: Brasília − 5h (antes era − 4h). Desembarque às ~07:00.",
+    "open_bar_incluso": "Grey Goose · Casamigos · Woodford Reserve · Vinhos e destilados premium (FAS Plus) · Internet Starlink (FAS Plus) · ⚠️ NÃO incluso no plano base: água engarrafada e Starbucks",
+    "escalas_agenda": [
+      {
+        "porto": "Cabo San Lucas",
+        "data": "27 Out · Ter",
+        "navio_horario": "11:00 às 19:00",
+        "desembarque": "Lancha (tender) — chegar cedo na fila!",
+        "transporte": "Tudo perto da marina — a pé",
+        "passeio_destaque": "Barco até El Arco · US$ 15–25/pessoa · 45 min (El Arco + Playa del Amor + leões-marinhos)",
+        "praias": "Playa El Médano (15 min a pé da marina) · Banho só aqui — Playa del Amor tem correnteza no lado do Pacífico",
+        "volta": "Última lancha antes das 19:00 — estar na fila às 17:30",
+        "dica": "Remédio de enjoo nos dias de lancha. Desembarque pode atrasar com mar agitado.",
+        "levar": "Passaporte, cartão do navio, roupa de banho, protetor solar, dólares em notas pequenas"
+      },
+      {
+        "porto": "Mazatlán",
+        "data": "28 Out · Qua",
+        "navio_horario": "08:00 às 18:00",
+        "desembarque": "Porto de carga · bonde gratuito até a saída",
+        "transporte": "Pulmonía (táxi aberto) · US$ 10–20 · combinar preço antes · Uber sai mais barato",
+        "distancia_centro": "~1,5 km · 15–20 min a pé",
+        "pontos": "Centro Histórico · Catedral Basílica · Plaza Principal · Plaza Machado · Teatro Ángela Peralta · Olas Altas · Malecón (clavadistas!)",
+        "volta": "Até 17:00 — navio sai às 18:00",
+        "dica": "Combinar preço total da pulmonía antes de entrar. Cidade espalhada — para Zona Dorada usar transporte.",
+        "levar": "Tênis, chapéu, protetor solar, pesos ou dólares em notas pequenas, água"
+      },
+      {
+        "porto": "Puerto Vallarta",
+        "data": "29 Out · Qui",
+        "navio_horario": "08:00 às 18:00",
+        "desembarque": "Terminal · táxis e vans autorizados na saída com preço tabelado",
+        "transporte": "Táxi ou van do porto · ~150 pesos até o Malecón",
+        "pontos": "Malecón (esculturas de bronze · Baía de Banderas) · Igreja N.S. Guadalupe · Rio Cuale · Zona Romântica · Playa Los Muertos (pescado zarandeado!)",
+        "volta": "Até 17:00 — navio sai às 18:00",
+        "dica": "⚠️ Em fev/2026 escalas foram canceladas; retomadas em mar/2026. Norwegian avisa se houver mudança. Ficar nas áreas turísticas. Usar repelente.",
+        "levar": "Cartão do navio, doc. com foto, roupa de banho, capa de chuva leve, repelente, pesos ou dólares"
+      }
+    ],
     "status": "⚠️ PARCIALMENTE CONFIRMADO",
     "pendencias": [
       "Número de reserva / localizador NCL",
@@ -386,9 +467,64 @@
     "nome": "Milhas Viagens & Turismo",
     "contato": "Alessandra Stecca — Diretora Executiva",
     "telefone": "(69) 99919-8730",
+    "telefone2": "(69) 98495-2802",
     "email": "ale.milhas@hotmail.com",
+    "instagram": "@milhasviagenseturismo",
     "cidade": "Cacoal, RO",
     "consolidadora": "prmartins@frtconsolidadora.tur.br · 55 69 999198730",
     "proposta_url": "https://milhasviagenseturismo.genitravel.com/proposta/91684902/2"
+  },
+  "dicas": {
+    "clima": [
+      {"destino": "Los Angeles", "periodo": "22–25/10", "temp": "14–24°C", "clima": "Seco e ensolarado · noites frescas", "roupa": "Roupa leve de dia · casaco leve à noite"},
+      {"destino": "Navio + Riviera Mexicana", "periodo": "25/10–01/11", "temp": "24–31°C", "clima": "Quente e úmido · chance de chuva à tarde em Puerto Vallarta", "roupa": "Roupa de verão · roupa de banho · capa de chuva leve"},
+      {"destino": "Las Vegas", "periodo": "01–08/11", "temp": "9–21°C", "clima": "Deserto · sol forte de dia · ~10°C à noite", "roupa": "Camadas: camiseta + blusa + jaqueta"},
+      {"destino": "Grand Canyon / Hoover Dam", "periodo": "Passeios no deserto", "temp": "~5°C cedo", "clima": "Manhãs frias e vento nos mirantes", "roupa": "Jaqueta mais quente · gorro · tênis fechado"}
+    ],
+    "fuso": {
+      "ate_31out": "Brasília − 4h",
+      "partir_1nov": "Brasília − 5h",
+      "nota": "Na madrugada de 01/11 os EUA saem do horário de verão: relógios voltam 1 hora (o dia terá 25h). A partir de 1º/11 escurece às ~16h45 em Las Vegas."
+    },
+    "moeda_gorjetas": {
+      "moeda_eua": "Dólar americano (US$) · cartão internacional com limite para cauções e resort fees",
+      "moeda_mexico": "Dólar aceito nos locais turísticos — troco em pesos. Notas pequenas: US$ 1, 5 e 10.",
+      "moeda_navio": "Dólar americano · conta fechada no dia do desembarque",
+      "gorjeta_restaurante": "18% a 22% da conta (nos EUA os preços são mostrados sem imposto — total na nota é 8–10% maior)",
+      "gorjeta_carregador": "US$ 2 a 5",
+      "tomadas": "110V · pinos chatos padrão americano · adaptador recomendado"
+    },
+    "documentos_mexico": "Brasileiros com visto americano (B1/B2) válido entram no México sem visto adicional. Confirmar regras vigentes antes do embarque.",
+    "las_vegas_shows": [
+      {"nome": "\"O\" Cirque du Soleil", "local": "Bellagio", "desc": "Clássico — acrobacias dentro e sobre a água"},
+      {"nome": "Mystère / KÀ (Cirque)", "local": "Treasure Island / MGM Grand", "desc": "Para quem vê Cirque pela 1ª vez"},
+      {"nome": "Michael Jackson ONE", "local": "Mandalay Bay", "desc": "Acrobacias com os sucessos do Rei do Pop"},
+      {"nome": "Mad Apple (Cirque)", "local": "New York-New York — ao lado do Park MGM", "desc": "Cirque com comédia e música"},
+      {"nome": "The Wizard of Oz at Sphere", "local": "Sphere · 2,7 km do Fontainebleau", "desc": "Experiência imersiva 360° — ingressos esgotam nos fins de semana, comprar antes!"}
+    ],
+    "las_vegas_gratuito": [
+      "Fontes do Bellagio (a cada 15–30 min à noite)",
+      "Conservatório do Bellagio (jardim temático)",
+      "The Venetian — canais com gôndolas e o Grand Canal Shoppes",
+      "Fremont Street Experience — telão de LED + shows de rua",
+      "Letreiro Welcome to Las Vegas — foto obrigatória (melhor cedo)"
+    ],
+    "las_vegas_passeios_fora": [
+      {"nome": "Red Rock Canyon", "dist": "~30 min", "desc": "Rochas vermelhas · circuito panorâmico de carro"},
+      {"nome": "Seven Magic Mountains", "dist": "~30 min", "desc": "Sete torres coloridas de pedra no deserto"},
+      {"nome": "Hoover Dam", "dist": "~45 min", "desc": "A grande represa Nevada–Arizona · levar passaporte"},
+      {"nome": "Valley of Fire", "dist": "~1h", "desc": "Parque de arenito vermelho e inscrições antigas"},
+      {"nome": "Grand Canyon West (Skywalk)", "dist": "~2h30", "desc": "O cânion com passarela de vidro · levar passaporte"},
+      {"nome": "Grand Canyon de helicóptero", "dist": "Dia todo ou meio dia", "desc": "Sobrevoo com pouso em alguns roteiros"}
+    ],
+    "dicas_escalas_gerais": [
+      "Seguir sempre o relógio do NAVIO — não o celular (fuso pode mudar em Puerto Vallarta)",
+      "Planejar estar de volta ao navio 1 hora antes — o navio não espera passageiros atrasados",
+      "Anotar o telefone do agente do porto (aparece na programação diária)",
+      "Levar só o necessário: cartão do navio, doc. com foto e dinheiro do dia",
+      "Dólar aceito nas áreas turísticas do México — troco vem em pesos. Levar notas pequenas (US$ 1, 5 e 10).",
+      "Água só engarrafada e gelo só em restaurantes de confiança no México",
+      "Protetor solar, chapéu e muita água — sol do Pacífico é forte"
+    ]
   }
 }

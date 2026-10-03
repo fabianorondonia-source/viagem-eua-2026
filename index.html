@@ -265,9 +265,24 @@ function hotelCard(h){
     ["Refeições",h.refeicoes],["Nº Reserva",h.reserva],["Localizador",h.localizador],
     ["Voucher",h.voucher],["Emissão",h.emissao],
     h.distancia_aeroporto?["Aeroporto",h.distancia_aeroporto]:null,
+    h.telefone?["Telefone",h.telefone]:null,
     ["Contato local",h.contato_local],["Emergência",h.emergencia]]
     .filter(Boolean).map(([k,v])=>`<div class="item"><div class="k">${k}</div><div class="v">${esc(v)}</div></div>`).join("");
   const dest=h.destaques?`<div class="hdest">⭐ ${esc(h.destaques)}</div>`:"";
+  // Custos extras: facility_fee / resort_fee, caucao, valet
+  const taxas=[];
+  if(h.facility_fee) taxas.push(`<div class="item"><div class="k">Facility Fee</div><div class="v">${esc(h.facility_fee)}${h.facility_fee_credito?`<br><span style="color:var(--ok);font-size:11px">💳 ${esc(h.facility_fee_credito)}</span>`:""}</div></div>`);
+  if(h.resort_fee) taxas.push(`<div class="item"><div class="k">Resort Fee</div><div class="v">${esc(h.resort_fee)}</div></div>`);
+  if(h.caucao) taxas.push(`<div class="item"><div class="k">Caução</div><div class="v">${esc(h.caucao)}</div></div>`);
+  if(h.valet) taxas.push(`<div class="item"><div class="k">Valet</div><div class="v">${esc(h.valet)}</div></div>`);
+  if(h.parking_self) taxas.push(`<div class="item"><div class="k">Estac. próprio</div><div class="v">${esc(h.parking_self)}</div></div>`);
+  if(h.checkin_dica) taxas.push(`<div class="item"><div class="k">Dica check-in</div><div class="v">${esc(h.checkin_dica)}</div></div>`);
+  if(h.monorail) taxas.push(`<div class="item"><div class="k">Monorail</div><div class="v">${esc(h.monorail)}</div></div>`);
+  const taxasHtml=taxas.length?`<div style="margin-top:12px">
+    <div style="font-size:11px;font-weight:700;color:var(--warn);text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px">💳 Custos adicionais no hotel</div>
+    <div class="kv">${taxas.join("")}</div>
+    ${h.nota_custos?`<div class="note warn" style="margin-top:8px">${esc(h.nota_custos)}</div>`:""}
+  </div>`:"";
   const mapa=h.maps_url?`<a href="${h.maps_url}" target="_blank" rel="noopener"
     style="display:inline-flex;align-items:center;gap:8px;margin-top:14px;padding:11px 20px;
       border-radius:12px;background:#1a9e5c;color:#fff;font-size:14px;font-weight:700;
@@ -281,7 +296,7 @@ function hotelCard(h){
       <div><h2>🏨 ${esc(h.nome)}<span class="haddr">📍 ${esc(h.endereco)}</span></h2></div>
       <span class="hnights">${h.noites} noites</span>
     </div>
-    <div class="bd"><div class="kv">${kv}</div>${dest}${mapa}</div></div>`;
+    <div class="bd"><div class="kv">${kv}</div>${dest}${taxasHtml}${mapa}</div></div>`;
 }
 
 function tabAereos(){
@@ -361,6 +376,31 @@ function tabCruzeiro(){
   }).join("");
   const pac=(c.pacotes_inclusos||[]).map(p=>`<li>${esc(p)}</li>`).join("");
   const pend=(c.pendencias||[]).map(p=>`<li>${esc(p)}</li>`).join("");
+  // Jantares confirmados
+  const jantaresHtml=(c.jantares_reservados||[]).map(j=>`
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;
+      background:var(--card2);border:1px solid var(--border);border-radius:12px;padding:12px 15px;margin-top:8px">
+      <div>
+        <div style="font-size:14px;font-weight:700">🍽️ ${esc(j.restaurante)}</div>
+        <div style="font-size:11.5px;color:var(--mut);margin-top:3px">${esc(j.data)} · ${esc(j.estilo)}</div>
+      </div>
+      <div style="text-align:right">
+        <div style="font-size:20px;font-weight:800;color:var(--gold)">${esc(j.horario)}</div>
+        <span class="tag ok" style="font-size:10px">${esc(j.status)}</span>
+      </div>
+    </div>`).join("");
+  // Festas a bordo
+  const festasHtml=(c.festas_a_bordo||[]).map(f=>`
+    <div style="background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:10px 13px;margin-top:7px">
+      <div style="font-size:13px;font-weight:700">🎉 ${esc(f.nome)}</div>
+      <div style="font-size:11px;color:var(--acc);margin-top:2px">${esc(f.data)}</div>
+      <div style="font-size:12px;color:var(--mut);margin-top:3px">${esc(f.descricao)}</div>
+    </div>`).join("");
+  // Navio info
+  const ni=c.navio_info||{};
+  const navioHtml=Object.keys(ni).length?`<div class="kv" style="margin-top:8px">
+    ${Object.entries(ni).map(([k,v])=>`<div class="item"><div class="k">${k}</div><div class="v">${esc(v)}</div></div>`).join("")}
+  </div>`:"";
   return `<div class="grid">
     <div class="card span2">
       <div class="hd">
@@ -371,10 +411,12 @@ function tabCruzeiro(){
         <div class="kv">
           <div class="item"><div class="k">Período</div><div class="v">${esc(c.periodo)}</div></div>
           <div class="item"><div class="k">Cabine</div><div class="v">${esc(c.cabine)}</div></div>
-          <div class="item"><div class="k">Embarque</div><div class="v">${esc(c.embarque)}</div></div>
+          <div class="item"><div class="k">Embarque</div><div class="v">${esc(c.embarque_detalhe||c.embarque)}</div></div>
           <div class="item"><div class="k">Desembarque</div><div class="v">${esc(c.desembarque)}</div></div>
         </div>
         <div class="note" style="margin-top:10px;font-size:11.5px">🛏️ ${esc(c.cabine_detalhe||"")}</div>
+        ${c.nota_fuso?`<div class="note warn" style="margin-top:8px">${esc(c.nota_fuso)}</div>`:""}
+        ${navioHtml}
       </div>
     </div>
     <div class="card">
@@ -382,10 +424,22 @@ function tabCruzeiro(){
       <div class="bd"><div class="porto-grid">${portosHtml}</div></div>
     </div>
     <div class="card">
+      <div class="hd"><h2>🍽️ Jantares Confirmados</h2><span class="tag ok">3 RESERVAS</span></div>
+      <div class="bd">
+        ${jantaresHtml}
+        ${c.dress_code_jantares?`<div class="note" style="margin-top:10px">👔 Dress code: ${esc(c.dress_code_jantares)}</div>`:""}
+      </div>
+    </div>
+    <div class="card">
+      <div class="hd"><h2>🎉 Festas a Bordo</h2></div>
+      <div class="bd">${festasHtml}</div>
+    </div>
+    <div class="card">
       <div class="hd"><h2>🎁 Pacotes Inclusos (Free At Sea)</h2><span class="tag ok">INCLUSO</span></div>
       <div class="bd">
         <ul class="plain">${pac}</ul>
-        <div class="note" style="margin-top:10px">💰 Gorjetas: ${esc(c.gorjetas||"")}</div>
+        ${c.open_bar_incluso?`<div class="note ok" style="margin-top:8px">🍹 ${esc(c.open_bar_incluso)}</div>`:""}
+        <div class="note" style="margin-top:8px">💰 Gorjetas: ${esc(c.gorjetas||"")}</div>
       </div>
     </div>
     ${pend?`<div class="card">
@@ -394,6 +448,108 @@ function tabCruzeiro(){
         <ul class="plain warn">${pend}</ul>
         <div class="note warn">📞 ${esc(c.acao)}</div>
       </div></div>`:""}
+  </div>`;
+}
+
+function tabEscalas(){
+  const escalas=(D.cruzeiro.escalas_agenda||[]);
+  const flagMap={"Cabo San Lucas":"🇲🇽","Mazatlán":"🇲🇽","Puerto Vallarta":"🇲🇽"};
+  const cards=escalas.map(e=>{
+    const flag=Object.entries(flagMap).find(([k])=>e.porto.includes(k));
+    const rows=[];
+    if(e.navio_horario) rows.push(["⏱️ Navio no porto",e.navio_horario]);
+    if(e.desembarque) rows.push(["🚤 Desembarque",e.desembarque]);
+    if(e.distancia_centro) rows.push(["📍 Centro",e.distancia_centro]);
+    if(e.transporte) rows.push(["🚕 Transporte",e.transporte]);
+    if(e.volta) rows.push(["🔙 Volta",e.volta]);
+    if(e.levar) rows.push(["🎒 Levar",e.levar]);
+    return `<div class="card">
+      <div class="hd">
+        <h2>${flag?flag[1]:"🚢"} ${esc(e.porto)}<small>${esc(e.data)}</small></h2>
+        <span class="tag info">${esc(e.navio_horario||"")}</span>
+      </div>
+      <div class="bd">
+        <div class="kv">${rows.map(([k,v])=>`<div class="item"><div class="k">${k}</div><div class="v">${esc(v)}</div></div>`).join("")}</div>
+        ${e.pontos?`<div class="hdest" style="margin-top:10px">📌 ${esc(e.pontos)}</div>`:""}
+        ${e.passeio_destaque?`<div class="note ok" style="margin-top:8px">⭐ ${esc(e.passeio_destaque)}</div>`:""}
+        ${e.praias?`<div class="note" style="margin-top:6px">🏖️ ${esc(e.praias)}</div>`:""}
+        ${e.dica?`<div class="note warn" style="margin-top:6px">💡 ${esc(e.dica)}</div>`:""}
+      </div>
+    </div>`;
+  }).join("");
+  const dgs=D.dicas?.dicas_escalas_gerais||[];
+  const dicasGeraisHtml=dgs.length?`<div class="card span2">
+    <div class="hd"><h2>📋 Regras de Ouro nas Escalas</h2></div>
+    <div class="bd"><ul class="plain">${dgs.map(d=>`<li>${esc(d)}</li>`).join("")}</ul></div>
+  </div>`:"";
+  return `<div class="grid">${cards}${dicasGeraisHtml}</div>`;
+}
+
+function tabDicas(){
+  const dk=D.dicas||{};
+  // Clima
+  const climaHtml=(dk.clima||[]).map(c=>`
+    <div style="background:var(--card2);border:1px solid var(--border);border-radius:12px;padding:12px 14px;margin-top:8px">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:8px;flex-wrap:wrap">
+        <div>
+          <div style="font-size:14px;font-weight:700">🌡️ ${esc(c.destino)}</div>
+          <div style="font-size:11px;color:var(--acc);margin-top:2px">${esc(c.periodo)}</div>
+        </div>
+        <span style="font-size:18px;font-weight:800;color:var(--gold)">${esc(c.temp)}</span>
+      </div>
+      <div style="font-size:12px;color:var(--mut);margin-top:6px">${esc(c.clima)}</div>
+      <div style="font-size:12px;color:var(--ok);margin-top:4px">👔 ${esc(c.roupa)}</div>
+    </div>`).join("");
+  // Fuso
+  const ft=dk.fuso||{};
+  const fusoHtml=ft.ate_31out?`<div class="kv" style="margin-top:8px">
+    <div class="item"><div class="k">Até 31/10</div><div class="v">${esc(ft.ate_31out)}</div></div>
+    <div class="item"><div class="k">A partir de 01/11</div><div class="v">${esc(ft.partir_1nov||"")}</div></div>
+  </div>${ft.nota?`<div class="note warn" style="margin-top:8px">${esc(ft.nota)}</div>`:""}`:""
+  // Moeda
+  const mg=dk.moeda_gorjetas||{};
+  const moedaHtml=Object.keys(mg).length?`<div class="kv" style="margin-top:8px">
+    ${Object.entries(mg).map(([k,v])=>`<div class="item"><div class="k">${k.replace(/_/g," ")}</div><div class="v">${esc(v)}</div></div>`).join("")}
+  </div>`:"";
+  // Shows LV
+  const showsHtml=(dk.las_vegas_shows||[]).map(s=>`
+    <div style="padding:8px 0;border-bottom:1px dashed var(--border)">
+      <div style="font-size:13px;font-weight:700">🎭 ${esc(s.nome)}</div>
+      <div style="font-size:11px;color:var(--acc)">${esc(s.local)}</div>
+      <div style="font-size:11px;color:var(--mut);margin-top:2px">${esc(s.desc)}</div>
+    </div>`).join("");
+  // Gratuito LV
+  const gratHtml=(dk.las_vegas_gratuito||[]).map(g=>`<li>${esc(g)}</li>`).join("");
+  // Passeios fora LV
+  const passHtml=(dk.las_vegas_passeios_fora||[]).map(p=>`
+    <div class="item"><div class="k">${esc(p.nome)} · ${esc(p.dist)}</div><div class="v">${esc(p.desc)}</div></div>`).join("");
+  return `<div class="grid">
+    <div class="card">
+      <div class="hd"><h2>🌤️ Clima por Destino</h2></div>
+      <div class="bd">${climaHtml}</div>
+    </div>
+    <div class="card">
+      <div class="hd"><h2>🕐 Fuso Horário</h2></div>
+      <div class="bd">${fusoHtml}</div>
+    </div>
+    <div class="card">
+      <div class="hd"><h2>💵 Moeda & Gorjetas</h2></div>
+      <div class="bd">${moedaHtml}
+        ${dk.documentos_mexico?`<div class="note ok" style="margin-top:10px">🇲🇽 ${esc(dk.documentos_mexico)}</div>`:""}
+      </div>
+    </div>
+    <div class="card">
+      <div class="hd"><h2>🎭 Shows em Las Vegas</h2></div>
+      <div class="bd" style="padding-top:10px">${showsHtml}</div>
+    </div>
+    <div class="card">
+      <div class="hd"><h2>🆓 Atrações Gratuitas em LV</h2></div>
+      <div class="bd"><ul class="plain">${gratHtml}</ul></div>
+    </div>
+    <div class="card">
+      <div class="hd"><h2>🏜️ Passeios fora de Las Vegas</h2></div>
+      <div class="bd"><div class="kv kv1" style="margin-top:8px">${passHtml}</div></div>
+    </div>
   </div>`;
 }
 
@@ -572,7 +728,9 @@ const ABAS=[
   {id:"aereos",  label:"✈️ Aéreos",         fn:()=>tabAereos()},
   {id:"hoteis",  label:"🏨 Hotéis",         fn:()=>tabHoteis()},
   {id:"cruzeiro",label:"🚢 Cruzeiro",       fn:()=>tabCruzeiro()},
+  {id:"escalas", label:"🌊 Escalas",        fn:()=>tabEscalas()},
   {id:"exp",     label:"🎡 Experiências",   fn:()=>tabExperiencias()},
+  {id:"dicas",   label:"💡 Dicas",          fn:()=>tabDicas()},
   {id:"docs",    label:"🛂 Documentos",     fn:()=>tabDocumentos()},
   {id:"fin",     label:"💰 Financeiro",     fn:()=>tabFinanceiro()},
 ];
