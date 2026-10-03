@@ -33,7 +33,7 @@
     {"data": "07/11", "titulo": "Dia livre", "sub": "Grand Canyon de ônibus ou helicóptero · ou Forum Shops + Fremont Street", "status": "ok"},
     {"data": "08 NOV", "titulo": "Voo de Retorno", "sub": "LAS → DFW → GRU · American Airlines Premium Economy", "status": "ok"},
     {"data": "09 NOV", "titulo": "Escala SP — Retorno", "sub": "Hampton by Hilton GRU reservado · voo Cacoal 10/11", "status": "ok"},
-    {"data": "10 NOV", "titulo": "Retorno a Cacoal", "sub": "Azul · bilhetes não emitidos", "status": "alerta"}
+    {"data": "10 NOV", "titulo": "Retorno a Cacoal", "sub": "Azul GRU → Cacoal · bilhete de retorno a confirmar", "status": "alerta"}
   ],
   "voo_ida": {
     "data": "Quinta, 22 Out 2026",
