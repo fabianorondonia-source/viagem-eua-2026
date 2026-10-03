@@ -77,6 +77,30 @@
     ],
     "poltronas_labels": ["LAS → DFW", "DFW → GRU"]
   },
+  "voo_azul_ida": {
+    "data": "Terça, 20 Out 2026",
+    "cia": "Azul Linhas Aéreas",
+    "classe": "Espaço Azul (GR)",
+    "localizador": "HK1PJM",
+    "status": "✅ Emitido",
+    "trechos": [
+      {"voo": "AD 2651", "de": "OAL", "de_cidade": "Cacoal, RO", "para": "CGB", "para_cidade": "Cuiabá, MT", "saida": "14:25", "chegada": "15:45", "embarque": "13:50", "fim_embarque": "14:05", "aeronave": "Embraer 195-E2"},
+      {"voo": "AD 2774", "de": "CGB", "de_cidade": "Cuiabá, MT", "para": "GRU", "para_cidade": "São Paulo - Guarulhos", "saida": "17:20", "chegada": "20:35", "embarque": "16:45", "fim_embarque": "17:00", "aeronave": "Embraer 195-E2"}
+    ],
+    "conexao": "Conexão em Cuiabá (CGB): 1h 35min",
+    "poltronas": [
+      {"nome": "Fabiano", "t1": "4A", "t2": "4A"},
+      {"nome": "Renata", "t1": "4B", "t2": "4B"}
+    ],
+    "poltronas_labels": ["OAL → CGB", "CGB → GRU"]
+  },
+  "voo_azul_retorno": {
+    "data": "Terça, 10 Nov 2026",
+    "cia": "Azul Linhas Aéreas",
+    "rota": "GRU → Cacoal (OAL)",
+    "status": "⚠️ A CONFIRMAR",
+    "nota": "Bilhete de retorno ainda não confirmado. Verificar emissão com a Milhas Viagens & Turismo."
+  },
   "hoteis": [
     {
       "nome": "InterContinental Los Angeles Downtown",
