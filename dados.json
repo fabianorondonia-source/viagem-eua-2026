@@ -465,15 +465,16 @@
     "itens": [
       {"k": "Origem", "v": "Cacoal, RO"},
       {"k": "Companhia", "v": "Azul Linhas Aéreas"},
-      {"k": "Saída de Cacoal", "v": "20/10/2026 → São Paulo (Guarulhos)"},
-      {"k": "Retorno a Cacoal", "v": "10/11/2026 · São Paulo (Guarulhos) → Cacoal"},
-      {"k": "Rota provável (fonte: internet)", "v": "Azul atende Cacoal só via Cuiabá: voo AD 4791, Cacoal 14:05 → Cuiabá 15:25 (ter/qui/sáb — 20/10 e 10/11 são terças) + conexão Cuiabá ↔ Guarulhos"},
-      {"k": "Voos e horários oficiais", "v": "⚠️ A CONFIRMAR quando a Azul emitir os bilhetes"},
-      {"k": "Poltronas Fabiano (ida / volta)", "v": "4A / 4A"},
-      {"k": "Poltronas Renata (ida / volta)", "v": "4B / 4B"},
-      {"k": "Status", "v": "⚠️ Reservado — bilhetes NÃO emitidos (não aparece no app da Azul)"}
+      {"k": "Localizador IDA", "v": "HK1PJM ✅"},
+      {"k": "IDA — Voo 1", "v": "AD 2651 · OAL 14:25 → CGB 15:45 · Embraer 195-E2"},
+      {"k": "IDA — Conexão CGB", "v": "1h 35min · embarque 16:45"},
+      {"k": "IDA — Voo 2", "v": "AD 2774 · CGB 17:20 → GRU 20:35 · Embraer 195-E2"},
+      {"k": "Retorno a Cacoal", "v": "10/11/2026 · GRU → Cacoal · ⚠️ bilhete a confirmar"},
+      {"k": "Poltronas Fabiano (ida)", "v": "4A (OAL→CGB) · 4A (CGB→GRU) · Espaço Azul"},
+      {"k": "Poltronas Renata (ida)", "v": "4B (OAL→CGB) · 4B (CGB→GRU) · Espaço Azul"},
+      {"k": "Status IDA", "v": "✅ Bilhetes emitidos — aparece no app da Azul"}
     ],
-    "alerta": "⚠️ Passagens Azul ainda não emitidas — cobrar emissão e conferir se a reserva aparece no app. Obs: chegada internacional em GRU é 09/11 às 08:30 — retorno a Cacoal em 10/11 implica 1 noite em São Paulo."
+    "alerta": "⚠️ Bilhete de RETORNO (10/11) ainda não confirmado. Verificar emissão com a Milhas Viagens & Turismo."
   },
   "documentos": [
     {"doc": "Passaporte nº", "fabiano": "GF361375", "renata": "GF361378"},
