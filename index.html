@@ -299,20 +299,66 @@ function hotelCard(h){
     <div class="bd"><div class="kv">${kv}</div>${dest}${taxasHtml}${mapa}</div></div>`;
 }
 
+function vooAzulCard(voo, titulo){
+  if(!voo) return "";
+  const isOk=voo.status&&voo.status.startsWith("✅");
+  const trechosHtml=(voo.trechos||[]).map((t,i)=>`
+    <div style="background:var(--card2);border:1px solid var(--border);border-radius:12px;padding:13px 15px;${i>0?'margin-top:8px':''}">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+        <div style="font-size:12px;font-weight:700;color:var(--acc)">${esc(t.voo)}</div>
+        <div style="font-size:11px;color:var(--mut)">${esc(t.aeronave||"")}</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;margin-top:8px;flex-wrap:wrap">
+        <div style="text-align:center">
+          <div style="font-size:22px;font-weight:800">${esc(t.de)}</div>
+          <div style="font-size:18px;font-weight:700;color:var(--acc)">${esc(t.saida)}</div>
+          <div style="font-size:10px;color:var(--mut)">${esc(t.de_cidade)}</div>
+        </div>
+        <div style="flex:1;text-align:center;font-size:18px;color:var(--mut)">✈️</div>
+        <div style="text-align:center">
+          <div style="font-size:22px;font-weight:800">${esc(t.para)}</div>
+          <div style="font-size:18px;font-weight:700;color:var(--acc)">${esc(t.chegada)}</div>
+          <div style="font-size:10px;color:var(--mut)">${esc(t.para_cidade)}</div>
+        </div>
+      </div>
+      ${t.embarque?`<div style="font-size:11px;color:var(--mut);margin-top:6px">🚪 Embarque: ${esc(t.embarque)} até ${esc(t.fim_embarque||"")}</div>`:""}
+    </div>`).join("");
+  const polHtml=(voo.poltronas||[]).map(p=>{
+    const labels=voo.poltronas_labels||[];
+    return `<div class="item">
+      <div class="k">🧑 ${esc(p.nome)}</div>
+      <div class="v">${labels.map((l,i)=>`${l}: ${esc(p["t"+(i+1)]||"—")}`).join(" · ")}</div>
+    </div>`;
+  }).join("");
+  return `<div class="card span2">
+    <div class="hd">
+      <h2>🛫 ${titulo}<small>${esc(voo.cia)} · ${esc(voo.data||"")}</small></h2>
+      <span class="tag ${isOk?'ok':'warn'}">${esc(voo.status)}</span>
+    </div>
+    <div class="bd">
+      <div class="kv">
+        <div class="item"><div class="k">Localizador</div><div class="v" style="font-weight:800;font-size:15px;letter-spacing:1px">${esc(voo.localizador||"⚠️ A CONFIRMAR")}</div></div>
+        <div class="item"><div class="k">Classe</div><div class="v">${esc(voo.classe||"")}</div></div>
+      </div>
+      ${voo.trechos?trechosHtml:`<div class="note warn">${esc(voo.nota||"")}</div>`}
+      ${voo.conexao?`<div class="note" style="margin-top:8px">🔄 ${esc(voo.conexao)}</div>`:""}
+      ${polHtml?`<div class="kv" style="margin-top:10px">${polHtml}</div>`:""}
+    </div>
+  </div>`;
+}
+
 function tabAereos(){
   const azul=D.logistica;
+  const azulRetHasData=D.voo_azul_retorno&&D.voo_azul_retorno.trechos;
   return `<div class="grid">
     ${vooCard(D.voo_ida,"Voo de Ida")}
     ${vooCard(D.voo_retorno,"Voo de Retorno")}
-    <div class="card span2">
-      <div class="hd"><h2>🛫 Voos Domésticos — Azul (Cacoal ↔ SP)</h2>
-        <span class="tag warn">⚠️ NÃO EMITIDO</span></div>
-      <div class="bd">
-        <div class="kv">${azul.itens.map(i=>`
-          <div class="item"><div class="k">${esc(i.k)}</div><div class="v">${esc(i.v)}</div></div>`).join("")}
-        </div>
-        <div class="note warn">${esc(azul.alerta)}</div>
-      </div></div>
+    ${vooAzulCard(D.voo_azul_ida,"Doméstico Ida — Cacoal → São Paulo")}
+    ${D.voo_azul_retorno?vooAzulCard(D.voo_azul_retorno,"Doméstico Retorno — São Paulo → Cacoal"):""}
+    ${azul.alerta?`<div class="card span2">
+      <div class="hd"><h2>⚠️ Pendência Azul</h2></div>
+      <div class="bd"><div class="note warn">${esc(azul.alerta)}</div></div>
+    </div>`:""}
   </div>`;
 }
 
