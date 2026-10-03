@@ -18,7 +18,7 @@
     "data_volta": "2026-11-09"
   },
   "timeline": [
-    {"data": "20 OUT", "titulo": "Saída de Cacoal", "sub": "Azul → São Paulo · bilhetes não emitidos · Pullman GRU reservado (20–22/10)", "status": "alerta"},
+    {"data": "20 OUT", "titulo": "Saída de Cacoal", "sub": "Azul 2651 · Cacoal 14:25 → Cuiabá 15:45 · Azul 2774 · Cuiabá 17:20 → GRU 20:35 · ✅ Bilhetes emitidos · Pullman GRU reservado", "status": "ok"},
     {"data": "22 OUT", "titulo": "Voo de Ida", "sub": "GRU → MEX → LAX · Aeromexico Premier Clássica", "status": "ok"},
     {"data": "22–25/10", "titulo": "Los Angeles", "sub": "InterContinental Downtown · 3 noites", "status": "ok"},
     {"data": "23/10", "titulo": "City Tour LA", "sub": "Hollywood e Downtown · 09h–17h", "status": "ok"},
