@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "03/10/2026",
+  "atualizado_em": "17/10/2026",
   "fontes": [
     "Roteiro_EUA_2026_v2_Milhas (1).pdf",
     "FABIANO EMISSOES VIVA (1).pdf",
@@ -9,7 +9,10 @@
     "Booking.com confirmação 5534.266.835 — Pullman Sao Paulo Guarulhos Airport (07/08/2026)",
     "Booking.com confirmação 6498.271.276 — Hampton by Hilton Guarulhos Airport (07/08/2026)",
     "CamScanner 03-10-2026 08.35.pdf — Roteiro Personalizado Final Milhas Viagens & Turismo (03/10/2026)",
-    "Screenshot app Azul — reserva HK1PJM confirmada · voos AD 2651 + AD 2774 · 20/10/2026 (03/10/2026)"
+    "Screenshot app Azul — reserva HK1PJM confirmada · voos AD 2651 + AD 2774 · 20/10/2026 (03/10/2026)",
+    "Cartão_de_embarque_navio.pdf — NCL boarding pass + itinerário oficial + amenidades (17/10/2026)",
+    "Etiqueta_NCL_Fabiano.pdf + Etiqueta_NCL_Renata.pdf — etiquetas bagagem DARK BLUE cabine 14742 (17/10/2026)",
+    "Imprimir_itens_reservados.pdf — 9 itens incluídos + 1 comprado Free at Sea Plus (17/10/2026)"
   ],
   "viagem": {
     "titulo": "EUA · México · Cruzeiro 2026",
@@ -245,8 +248,12 @@
     "itinerario": "Riviera Mexicana",
     "embarque": "Los Angeles, CA · saída 16:00 (25/10)",
     "desembarque": "Los Angeles, CA · chegada 07:00 (01/11)",
-    "cabine": "Varanda Familiar · 22–26m² · até 4 pessoas",
-    "cabine_detalhe": "Cama de casal (conversível em 2 de solteiro sob solicitação) + cama adicional + varanda · Ar cond · TV · tomadas 110/220V · frigobar · cofre · banheiro privativo · secador",
+    "reserva_ncl": "63224608",
+    "reservado_por": "CVC OPERADORA",
+    "cabine": "Sacada B4 · Cabine nº 14742",
+    "cabine_detalhe": "Deck 14 · Proa (FWD) · ESTIBORDO · Etiqueta de bagagem: DARK BLUE · Cama de casal + varanda · Ar cond · TV · tomadas 110/220V · frigobar · cofre · banheiro privativo · secador",
+    "latitude_fabiano": "278504146",
+    "latitude_renata": "278504147",
     "itinerario_dia_a_dia": [
       {"data": "Qui 25/10", "porto": "Los Angeles, EUA — embarque", "chegada": "—", "saida": "16:00"},
       {"data": "Sex 26/10", "porto": "Em navegação", "chegada": "—", "saida": "—"},
@@ -280,14 +287,19 @@
       ]
     },
     "pacotes_inclusos": [
-      "✅ Wi-Fi de alta velocidade com streaming ilimitado (Free at Sea Plus)",
-      "✅ Pacote Starbucks® ilimitado a bordo (1 bebida/visita)",
-      "✅ Água mineral e energéticos no bar + água mineral premium nos restaurantes",
-      "✅ Vinhos, champagne e destilados premium (Patrón Añejo, Macallan 12 YO) — 40% off garrafas",
-      "✅ 50% de desconto em restaurantes de especialidade",
-      "✅ Crédito de US$ 50 por porto em excursões NCL · US$ 150 total (3 portos)"
+      "✅ Open Bar Ilimitado — Grey Goose, Casamigos, Woodford Reserve, vinhos, cervejas, refrigerantes e sucos (BEVPKA)",
+      "✅ Wi-Fi de alta velocidade com streaming ilimitado — upgrade FAS Plus (25FASP)",
+      "✅ Pacote Starbucks® ilimitado a bordo — 1 bebida por visita (FSUSBK)",
+      "✅ Pacote Wi-Fi: 150 minutos (pacote base, 25AM71)",
+      "✅ 3 jantares em restaurantes de especialidade incluídos (3SDINA)",
+      "✅ Água mineral & bebida energética — bar e restaurantes (FSUWTR)",
+      "✅ 50% de desconto em restaurantes de especialidade — refeições adicionais (FSUDIN)",
+      "✅ Crédito de US$ 50 por porto em excursões NCL · US$ 50 total (SHDC50, apenas Fabiano)",
+      "✅ Vinhos premium, champanhe e licores — +50 rótulos por taça; 40% off garrafas (FSUWNE)",
+      "✅ Gorjetas pré-pagas (Tarifa de serviço pré-paga, PSCREC)",
+      "✅ Free at Sea Plus — pacote completo (Fabiano + Renata)"
     ],
-    "gorjetas": "US$ 28,50 por pessoa por dia · estimativa: 2 pax × 7 noites = US$ 399",
+    "gorjetas": "✅ PRÉ-PAGAS (Tarifa de serviço pré-paga, código PSCREC) — sem cobrança adicional a bordo",
     "navio_info": {
       "lancamento": "2019 · reformado 2024",
       "classe": "Breakaway Plus",
@@ -296,7 +308,7 @@
       "restaurantes": "~20 restaurantes a bordo",
       "bares": "+15 bares e lounges"
     },
-    "embarque_detalhe": "Los Angeles World Cruise Center · San Pedro, CA · ~40 min do InterContinental Downtown · Embarque encerra antes das 16:00 · Documentos e passaporte na bagagem de mão",
+    "embarque_detalhe": "Los Angeles World Cruise Center · 100 Swinford St, San Pedro, CA 90731 · ~40 min do InterContinental Downtown · Horário de chegada ao cais: 12h30–13h00 · Embarque começa às 12h · Partida: 16h00 · Todos a bordo até 14h00 (2h antes) · Documentos e passaporte na bagagem de mão",
     "dress_code_jantares": "Smart casual — calça comprida e camisa ou polo; vestido ou conjunto. Sem bermuda, regata ou chinelo.",
     "jantares_reservados": [
       {"data": "26/10 · Dom · Navegação", "restaurante": "Le Bistro", "horario": "20:30", "estilo": "Cozinha francesa clássica", "status": "✅ Reserva confirmada"},
@@ -310,7 +322,7 @@
       {"nome": "Festas Décadas (70s/80s)", "data": "A confirmar a bordo", "descricao": "Acompanhar programação no app Norwegian"}
     ],
     "nota_fuso": "⚠️ Na madrugada de 01/11 os EUA saem do horário de verão: relógios voltam 1 hora automaticamente. A partir de 01/11: Brasília − 5h (antes era − 4h). Desembarque às ~07:00.",
-    "open_bar_incluso": "Grey Goose · Casamigos · Woodford Reserve · Vinhos e destilados premium (FAS Plus) · Internet Starlink (FAS Plus) · ⚠️ NÃO incluso no plano base: água engarrafada e Starbucks",
+    "open_bar_incluso": "✅ INCLUSO — Grey Goose · Casamigos · Woodford Reserve · vinhos · cervejas · refrigerantes · sucos · Open Bar Ilimitado (BEVPKA) + Vinhos premium por taça (FSUWNE) + Água engarrafada + Starbucks (FAS Plus)",
     "escalas_agenda": [
       {
         "porto": "Cabo San Lucas",
@@ -348,13 +360,9 @@
         "levar": "Cartão do navio, doc. com foto, roupa de banho, capa de chuva leve, repelente, pesos ou dólares"
       }
     ],
-    "status": "⚠️ PARCIALMENTE CONFIRMADO",
-    "pendencias": [
-      "Número de reserva / localizador NCL",
-      "Documentos de embarque",
-      "Confirmar se gorjetas estão incluídas no pacote ou a pagar a bordo"
-    ],
-    "acao": "Solicitar à Alessandra Stecca o número de reserva NCL e os documentos de embarque"
+    "status": "✅ CONFIRMADO — Documentos NCL emitidos",
+    "pendencias": [],
+    "acao": "Baixar app Norwegian Cruise Line · Reservar excursões em terra (até 2 dias antes do embarque)"
   },
   "transfers": {
     "grupo": "Tour Viva · Milhas Viagens & Turismo · 19 passageiros · serviço privativo",

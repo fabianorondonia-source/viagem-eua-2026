@@ -451,16 +451,19 @@ function tabCruzeiro(){
     <div class="card span2">
       <div class="hd">
         <h2>🚢 ${esc(c.navio)}<small>${esc(c.companhia)} · ${esc(c.itinerario)}</small></h2>
-        <span class="tag warn">${esc(c.status)}</span>
+        <span class="tag ${c.status&&c.status.startsWith("✅")?"ok":"warn"}">${esc(c.status)}</span>
       </div>
       <div class="bd">
         <div class="kv">
+          <div class="item"><div class="k">Reserva NCL</div><div class="v" style="font-weight:800;font-size:15px;letter-spacing:1px">${esc(c.reserva_ncl||"—")}</div></div>
+          <div class="item"><div class="k">Reservado por</div><div class="v">${esc(c.reservado_por||"")}</div></div>
           <div class="item"><div class="k">Período</div><div class="v">${esc(c.periodo)}</div></div>
           <div class="item"><div class="k">Cabine</div><div class="v">${esc(c.cabine)}</div></div>
           <div class="item"><div class="k">Embarque</div><div class="v">${esc(c.embarque_detalhe||c.embarque)}</div></div>
           <div class="item"><div class="k">Desembarque</div><div class="v">${esc(c.desembarque)}</div></div>
         </div>
         <div class="note" style="margin-top:10px;font-size:11.5px">🛏️ ${esc(c.cabine_detalhe||"")}</div>
+        ${c.latitude_fabiano?`<div class="note" style="margin-top:6px;font-size:11px">🎁 Latitudes Fabiano: ${esc(c.latitude_fabiano)} · Renata: ${esc(c.latitude_renata||"")} · Status: Novo Convidado</div>`:""}
         ${c.nota_fuso?`<div class="note warn" style="margin-top:8px">${esc(c.nota_fuso)}</div>`:""}
         ${navioHtml}
       </div>
